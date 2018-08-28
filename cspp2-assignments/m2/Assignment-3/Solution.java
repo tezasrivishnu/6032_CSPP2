@@ -6,15 +6,15 @@ public class Solution {
 	*/
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
-        double base = s.nextInt();
-        double exponent = s.nextInt();
-        double result=power(base,exponent);
+        long base = s.nextInt();
+        long exponent = s.nextInt();
+        long result=power(base,exponent);
         System.out.println(result);
 	}
 	/*
 	Need to write the power function and print the output.
 	*/
-	public static double power(double base, double exponent){
+	public static long power(long base, long exponent){
 		if (exponent!=0){
 			return (base * power(base, exponent-1));
 		}
