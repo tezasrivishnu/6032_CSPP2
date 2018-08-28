@@ -23,15 +23,15 @@ public final class Solution {
     *@param exponent is the parameter.
     *@return long value
     */
-    public static long power(final long base, final long exponent){
+    public static long power(final long base, final long exponent) {
         /**
         calculating the power
         */
         if (exponent != 0) {
             return (base * power(base, exponent - 1));
-        }
-        else {
+        } else {
             return 1;
         }
     }
 }
+
