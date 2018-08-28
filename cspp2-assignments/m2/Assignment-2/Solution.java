@@ -1,12 +1,12 @@
 import java.util.Scanner;
 /**
- * @author vishnu
+ * @author vishnu.
  */
 public final class Solution {
     /**
      * setting the value of 4.
      */
-    private static final int four = 4;
+    private static final int FOUR = 4;
     /**
     *empty constructor.
     */
@@ -25,10 +25,10 @@ public final class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        rootsOfQuadraticEquation(a, b, c);
+        rootsOfQuadEq(a, b, c);
     }
     /*
-    Need to write the rootsOfQuadraticEquation function and print the output.
+    Need to write the rootsOfQuadEq function and print the output.
     */
     /**
      *calculating the roots
@@ -36,8 +36,8 @@ public final class Solution {
      * @param b is int type
      * @param c is int type
      */
-    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
-        double d = (b * b) - (four * a * c);
+    public static void rootsOfQuadEq(final int a, final int b, final int c) {
+        double d = (b * b) - (FOUR * a * c);
         double r1 = (-b + Math.sqrt(d)) / (2 * a);
         double r2 = (-b - Math.sqrt(d)) / (2 * a);
         System.out.println(r1 + " " + r2);
