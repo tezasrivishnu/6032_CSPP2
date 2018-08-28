@@ -21,6 +21,7 @@ public final class Solution {
     Need to write the power function and print the output.
     *@param base is the parameter.
     *@param exponent is the parameter.
+    *@return long value
     */
     public static long power(final long base, final long exponent){
         /**
