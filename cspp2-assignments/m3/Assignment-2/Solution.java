@@ -1,6 +1,19 @@
 import java.util.Scanner;
-
+/**
+ * Finding 7's below n.
+ * @author tezasrivishnu.
+ */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution(){
+		//not using.
+	}
+	/**
+	 * Main program.
+	 * @param args is the parameter.
+	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
@@ -10,6 +23,11 @@ public class Solution {
 		}
 	System.out.println(count);
 	}
+	/**
+	 * Calculating the 7's below i.
+	 * @param i int value is the parameter.
+	 * @return  an int value.
+	 */
 	public static int finding(int i) {
 		int count = 0;
 		while (i > 0) {
