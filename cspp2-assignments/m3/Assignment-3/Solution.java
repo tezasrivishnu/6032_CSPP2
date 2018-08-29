@@ -19,7 +19,7 @@ public final class Solution {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int i = 1;
-        System.out.println(Divisor(a, b));
+        System.out.println(divisor(a, b));
     }
     /**
      * calculating the GCD.
@@ -27,7 +27,7 @@ public final class Solution {
      * @param b   is a int value.
      * @return a int value.
      */
-    public static int Divisor(final int a, final int b) {
+    public static int divisor(final int a, final int b) {
         int temp;
         int gcd = 1;
         if (a == b) {
@@ -47,3 +47,4 @@ public final class Solution {
     return gcd;
     }
 }
+ 
