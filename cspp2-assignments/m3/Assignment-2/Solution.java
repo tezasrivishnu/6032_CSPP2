@@ -4,7 +4,13 @@ import java.util.Scanner;
  * @author tezasrivishnu.
  */
 public final class Solution {
+    /**
+     * setting value of 10.
+     */
     private static final int TEN = 10;
+    /**
+     * setting value of 7.
+     */
     private static final int SEVEN = 7;
     /**
      * Constructs the object.
