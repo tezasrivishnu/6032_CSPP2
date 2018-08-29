@@ -37,7 +37,7 @@ public final class Solution {
      * @return  an int value.
      */
     public static int finding(final int i) {
-    	int temp = i;
+        int temp = i;
         int count = 0;
         while (temp > 0) {
             if (temp % TEN == SEVEN) {
