@@ -13,6 +13,10 @@ public final class Solution {
      */
     private static final int SEVEN = 7;
     /**
+     * setting value of 7.
+     */
+    private static final int i = 0;
+    /**
      * Constructs the object.
      */
     private Solution() {
