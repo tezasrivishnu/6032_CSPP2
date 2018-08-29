@@ -13,10 +13,6 @@ public final class Solution {
      */
     private static final int SEVEN = 7;
     /**
-     * setting value of 7.
-     */
-    private static final int i = 0;
-    /**
      * Constructs the object.
      */
     private Solution() {
@@ -40,13 +36,14 @@ public final class Solution {
      * @param i int value is the parameter.
      * @return  an int value.
      */
-    public static int finding(int i) {
+    public static int finding(final int i) {
+    	int temp = i;
         int count = 0;
-        while (i > 0) {
-            if (i % TEN == SEVEN) {
+        while (temp > 0) {
+            if (temp % TEN == SEVEN) {
                 count += 1;
             }
-            i = i / TEN;
+            temp /= TEN;
         }
         return count;
     }
