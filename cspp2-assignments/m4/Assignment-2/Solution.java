@@ -27,8 +27,8 @@ public final class Solution {
         int x = in.nextInt();
         int y  = in.nextInt();
         int b[][] = new int[x][y];
-        for (int i = 0; i < x ;i++) {
-            for (int j = 0 ; j < y; j++) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
                 b[i][j] = in.nextInt();
             }
         }
@@ -37,7 +37,7 @@ public final class Solution {
             int j;
             int sum[][] = new int[m][y];
             for (i = 0; i < m; i++) {
-                for (j = 0 ; j < n ; j++) {
+                for (j = 0; j < n; j++) {
                     sum[i][j] = a[i][j] + b[i][j];
                 }
             }
