@@ -26,7 +26,7 @@ public final class Solution {
         }
         int x = in.nextInt();
         int y  = in.nextInt();
-        int[][] b = new int[x][y]; 
+        int[][] b = new int[x][y];
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 b[i][j] = in.nextInt();
