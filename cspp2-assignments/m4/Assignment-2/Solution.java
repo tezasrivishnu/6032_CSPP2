@@ -25,8 +25,8 @@ class Solution {
 			for (i = 0 ; i < m ; i++ )
 				for (j = 0 ; j < n ; j++ )
 					sum[i][j] = a[i][j] + b[i][j];
-			for (i = 0 ; i < m ; i++ ){
-				for (j = 0 ; j < n ; j++ ){
+			for (i = 0 ; i < m-1 ; i++ ){
+				for (j = 0 ; j < n-1 ; j++ ){
 					System.out.print(sum[i][j] + " ");
 				}
 				System.out.println(sum[i][j]);
