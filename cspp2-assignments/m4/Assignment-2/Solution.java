@@ -14,7 +14,7 @@ public final class Solution {
      * main program.
      * @param args is the parameter.
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         Scanner in = new Scanner(System.in);
         int m = in.nextInt();
         int n  = in.nextInt();
