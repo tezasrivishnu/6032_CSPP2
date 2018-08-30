@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Adition of two matrices.
+ */
 class Solution {
 	public static void main(String args[]) {
 		Scanner in = new Scanner(System.in);
@@ -15,14 +18,14 @@ class Solution {
 		for (int i = 0 ; i < x ; i++ )
 			for (int j = 0 ; j < y ; j++ )
 				b[i][j] = in.nextInt();
-		if (n==x) {
+		if (m == x && n == y) {
 			int sum[][] = new int[m][y];
 			for (int i = 0 ; i < m ; i++ )
 				for (int j = 0 ; j < y ; j++ )
 					sum[i][j] = a[i][j] + b[i][j];
-			for (int i = 0 ; i < m ; i++ ) {
-				System.out.println(Arrays.toString(sum[i]));
-			}
+			for (int i = 0 ; i < m ; i++ )
+				for (int j = 0 ; j < n ; i++ )
+					System.out.println(sum[i][j] + " ");
 		} else {
 			System.out.println("not possible");
 		}
