@@ -27,7 +27,7 @@ class Solution {
 				for (int j = 0 ; j < n-1 ; j++ ){
 					System.out.print(sum[i][j] + " ");
 				}
-				System.out.println(sum[m][n]);
+				System.out.println(sum[m-1][n-1]);
 			}
 		} else {
 			System.out.println("not possible");
