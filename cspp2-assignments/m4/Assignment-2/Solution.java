@@ -19,15 +19,17 @@ class Solution {
 			for (int j = 0 ; j < y ; j++ )
 				b[i][j] = in.nextInt();
 		if (m == x && n == y) {
+			int i;
+			int j;
 			int sum[][] = new int[m][y];
-			for (int i = 0 ; i < m ; i++ )
-				for (int j = 0 ; j < y ; j++ )
+			for (i = 0 ; i < m ; i++ )
+				for (j = 0 ; j < y ; j++ )
 					sum[i][j] = a[i][j] + b[i][j];
-			for (int i = 0 ; i < m-1 ; i++ ){
-				for (int j = 0 ; j < n-1 ; j++ ){
+			for (i = 0 ; i < m ; i++ ){
+				for (j = 0 ; j < n ; j++ ){
 					System.out.print(sum[i][j] + " ");
 				}
-				System.out.println(sum[m-1][n-1]);
+				System.out.println(sum[i][j]);
 			}
 		} else {
 			System.out.println("not possible");
