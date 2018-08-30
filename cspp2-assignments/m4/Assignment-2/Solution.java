@@ -37,7 +37,7 @@ public final class Solution {
             int j;
             int sum[][] = new int[m][y];
             for (i = 0; i < m; i++) {
-                for (j = 0 ;j < n ;j++) {
+                for (j = 0 ; j < n; j++) {
                     sum[i][j] = a[i][j] + b[i][j];
                 }
             }
