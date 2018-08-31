@@ -15,7 +15,7 @@ public final class Solution {
 	 * @param args is the parameter.
 	 */
 	public static void main(final String[] args) {
-		double res = 0;
+		double res;
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		for (int i = 0; i <= n; i++) {
