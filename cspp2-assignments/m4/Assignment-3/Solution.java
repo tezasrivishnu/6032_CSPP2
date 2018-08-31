@@ -37,7 +37,7 @@ public final class Solution {
 			sum = sum + (n * Math.pow(2, b - 1));
 			b -= 1;
 		} 
-	System.out.println(sum);
+	//stem.out.println(sum);
 	return sum;
 	}
 }
