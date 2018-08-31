@@ -28,7 +28,7 @@ public final class Solution {
 	 * @param s string is the parameter.
 	 * @return  double value.
 	 */
-	static double binaryToDecimal(final String s) {
+	public static double binaryToDecimal(final String s) {
 		int a = s.length();
 		double sum = 0;
 		long b = a;
@@ -36,8 +36,9 @@ public final class Solution {
 			long n = Character.getNumericValue(s.charAt(i));
 			sum = sum + (n * Math.pow(2, b - 1));
 			b -= 1;
-		} 
-	//stem.out.println(sum);
-	return sum;
-	}
+		}
+		System.out.println(sum);
+		return sum;
+	}	
+
 }
