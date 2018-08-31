@@ -28,7 +28,7 @@ public final class Solution {
 	 * @param s string is the parameter.
 	 * @return  double value.
 	 */
-	public static double binaryToDecimal(final String s) {
+	public static void binaryToDecimal(final String s) {
 		int a = s.length();
 		double sum = 0;
 		long b = a;
@@ -38,10 +38,8 @@ public final class Solution {
 			b -= 1;
 		}
 		result(sum);
-		return sum;
 	}
-	public static double result(final double sum) {
+	public static void result(final double sum) {
 		System.out.println((int) sum);
-		return sum;
 	}
 }
