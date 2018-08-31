@@ -19,7 +19,7 @@ public final class Solution {
 		int n = sc.nextInt();
 		for (int i = 0; i <= n; i++) {
 			String s = sc.nextLine();
-			double res = binaryToDecimal(s);
+			binaryToDecimal(s);
 			// System.out.println((int)res);
 		}
 	}
