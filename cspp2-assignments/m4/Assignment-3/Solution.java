@@ -31,13 +31,15 @@ public final class Solution {
 	public static void binaryToDecimal(final String s) {
 		int a = s.length();
 		double sum = 0;
+		double temp = 0;
 		long b = a;
 		for (int i = 0; i <= a - 1; i++) {
 			long n = Character.getNumericValue(s.charAt(i));
-			sum = sum + (n * Math.pow(2, b - 1));
+			sum = (n * Math.pow(2, b - 1));
+			temp += sum;
 			b -= 1;
 		}
-		result(sum);
+		result(temp);
 	}
 	public static void result(final double sum) {
 		System.out.println((int) sum);
