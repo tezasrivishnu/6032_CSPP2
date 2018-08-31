@@ -19,29 +19,25 @@ public final class Solution {
 		int n = sc.nextInt();
 		for (int i = 0; i <= n; i++) {
 			String s = sc.nextLine();
-			int a = s.length();
-			double sum = 0;
-			long b = a;
-			for (int j = 0; j <= a - 1; j++) {
-				long z = Character.getNumericValue(s.charAt(j));
-				sum = sum + (z * Math.pow(2, b - 1));
-				b -= 1;
-			} System.out.println(sum);
+			double res = binaryToDecimal(s);
+			// System.out.println((int)res);
 		}
 	}
-	// /**
-	//  * converting binary to decimal.
-	//  * @param s string is the parameter.
-	//  * @return  double value.
-	//  */
-	// static double binaryToDecimal(final String s) {
-	// 	int a = s.length();
-	// 	double sum = 0;
-	// 	long b = a;
-	// 	for (int i = 0; i <= a - 1; i++) {
-	// 		long n = Character.getNumericValue(s.charAt(i));
-	// 		sum = sum + (n * Math.pow(2, b - 1));
-	// 		b -= 1;
-	// 	} return sum;
-	// }
+	/**
+	 * converting binary to decimal.
+	 * @param s string is the parameter.
+	 * @return  double value.
+	 */
+	static double binaryToDecimal(final String s) {
+		int a = s.length();
+		double sum = 0;
+		long b = a;
+		for (int i = 0; i <= a - 1; i++) {
+			long n = Character.getNumericValue(s.charAt(i));
+			sum = sum + (n * Math.pow(2, b - 1));
+			b -= 1;
+		} 
+	System.out.println(sum);
+	return sum;
+	}
 }
