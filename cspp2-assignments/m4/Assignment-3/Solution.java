@@ -15,12 +15,11 @@ public final class Solution {
 	 * @param args is the parameter.
 	 */
 	public static void main(final String[] args) {
-		double res;
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i <= n; i++) {
 			String s = sc.nextLine();
-			res = binaryToDecimal(s);
+			double res = binaryToDecimal(s);
 			System.out.println((int)res);
 		}
 	}
