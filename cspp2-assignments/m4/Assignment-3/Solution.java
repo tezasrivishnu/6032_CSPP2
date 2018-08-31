@@ -20,7 +20,7 @@ public final class Solution {
         for (int i = 0; i < n; i++) {
             String s = sc.next();
             double res = binaryToDecimal(s);
-            System.out.println((int)res);
+            System.out.println((int) res);
         }
     }
     /**
