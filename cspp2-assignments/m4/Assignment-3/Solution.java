@@ -21,7 +21,7 @@ public final class Solution {
 	}
 	public static void reading(Scanner sc,final int n){
 		for (int i = 0; i <= n; i++) {
-			String s = sc.nextLine();
+			String s = sc.next();
 			binaryToDecimal(s);
 			// System.out.println((int)res);
 		}
@@ -44,7 +44,7 @@ public final class Solution {
 		}
 		result(temp);
 	}
-	private static void result(final double sum) {
+	static void result(final double sum) {
 		System.out.println((int) sum);
 	}
 }
