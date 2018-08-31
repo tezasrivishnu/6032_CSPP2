@@ -20,7 +20,7 @@ public final class Solution {
 		reading(sc, n);
 	}
 	public static void reading(Scanner sc,final int n){
-		for (int i = 0; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 			String s = sc.next();
 			binaryToDecimal(s);
 			// System.out.println((int)res);
