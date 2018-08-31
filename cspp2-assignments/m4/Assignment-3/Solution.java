@@ -37,8 +37,11 @@ public final class Solution {
 			sum = sum + (n * Math.pow(2, b - 1));
 			b -= 1;
 		}
-		System.out.println(sum);
+		result(sum);
 		return sum;
-	}	
-
+	}
+	public static double result(final double sum) {
+		System.out.println((int) sum);
+		return sum;
+	}
 }
