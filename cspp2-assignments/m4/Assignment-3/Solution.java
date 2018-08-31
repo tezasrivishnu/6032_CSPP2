@@ -44,7 +44,7 @@ public final class Solution {
 		}
 		result(temp);
 	}
-	public static void result(final double sum) {
+	private static void result(final double sum) {
 		System.out.println((int) sum);
 	}
 }
