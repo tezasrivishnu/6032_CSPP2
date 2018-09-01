@@ -1,11 +1,19 @@
 import java.util.Scanner;
 /**
- * Write a java program to round the
+ * Write a java program to round the.
  * elements of a matrix to the nearest 100.
  *
- * @author :
+ * @author : tezasrivishnu.
  */
 final class Solution {
+    /**
+     * setting value of 50.
+     */
+    private static final int FIFTY = 50;
+    /**
+     * setting value of 100.
+     */
+    private static final int HUNDRED = 100;
     /**
      * Constructs the object.
      */
@@ -13,29 +21,30 @@ final class Solution {
         //not used
     }
     /**
-     * Function to round the
+     * Function to round the.
      * elements of a matrix to the nearest 100.
      *
-     * @param      a     Matrix of which the elements to be rounded
-     * @param      rows     Number of rows
-     * @param      columns     Number of columns
+     * @param      a     Matrix of which the elements to be rounded.
+     * @param      rows     Number of rows.
+     * @param      columns     Number of columns.
      *
-     * @return     Matrix of the rounded elements
+     * @return     Matrix of the rounded elements.
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] a,
+                                final int rows, final int columns) {
         int[][] mat = new int[rows][columns];
-        for (int i = 0; i < rows ; i++ ) {
-            for (int j = 0; j < columns ; j++ ) {
-                int r = (a[i][j] +50)/100;
-                mat[i][j] = r * 100;
-            } 
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                int r = (a[i][j] + FIFTY) / HUNDRED;
+                mat[i][j] = r * HUNDRED;
+            }
         }
         return mat;
     }
     /**
      * Main function.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments.
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
