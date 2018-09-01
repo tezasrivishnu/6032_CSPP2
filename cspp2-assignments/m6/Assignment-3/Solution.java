@@ -52,7 +52,7 @@ final class Solution {
         char newChar = scan.next().charAt(0);
         String newCharArray = replaceAll(charArray, oldChar, newChar);
         char[] ch = new char[newCharArray.length()];
-        for (int i = 0; i < newCharArray.length(); i++ ) {
+        for (int i = 0; i < newCharArray.length(); i++) {
             ch[i] = newCharArray.charAt(i);
         }
         System.out.println(Arrays.toString(ch));
