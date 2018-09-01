@@ -26,7 +26,7 @@ final class Solution {
         int[][] mat = new int[rows][columns];
         for (int i = 0; i < rows ; i++ ) {
             for (int j = 0; j < columns ; j++ ) {
-                int r = Math.round(a[i][j] / 100);
+                int r = (a[i][j] +50)/100;
                 mat[i][j] = r * 100;
             } 
         }
