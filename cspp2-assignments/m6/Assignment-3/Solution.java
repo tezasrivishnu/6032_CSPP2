@@ -27,9 +27,6 @@ final class Solution {
 	                         final char oldChar, final char newChar) {
 		String str = new String(charArray);
 		String temp = "";
-		System.out.println(str);
-		System.out.println(oldChar);
-		System.out.println(newChar);
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) == oldChar) {
 				temp += newChar;
