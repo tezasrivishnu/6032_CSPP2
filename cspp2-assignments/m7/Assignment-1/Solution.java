@@ -16,7 +16,7 @@ class InputValidator {
      * setting the input.
      * @param input string is the parameter.
      */
-    InputValidator(final String input) {
+    public InputValidator(final String input) {
         this.input = input;
     }
     /**
@@ -25,20 +25,22 @@ class InputValidator {
      * @return boolean value.
      */
     public static boolean validateData(final String input) {
-        if (input.length() >= SIX)
+        if (input.length() >= SIX){
             return true;
-        return false;
+        } else{
+            return false;
+        }
     }
 }
 /**
  * Class for printing the answer.
  */
-public class Solution {
+class Solution {
     /**
      * main function.
      * @param args is the parameter.
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
