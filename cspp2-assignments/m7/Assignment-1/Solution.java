@@ -14,9 +14,9 @@ class InputValidator {
     private String input;
     /**
      * setting the input.
-     * @param input string is the parameter.
+     * @param inp string is the parameter.
      */
-    public InputValidator(final String inp) {
+    InputValidator(final String inp) {
         input = inp;
     }
     /**
