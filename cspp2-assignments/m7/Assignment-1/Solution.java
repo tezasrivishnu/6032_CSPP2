@@ -8,7 +8,10 @@ class InputValidator {
      * setting value of 6.
      */
     private static final int SIX = 6;
-    String input;
+    /**
+     * declaring string.
+     */
+    private String input;
     /**
      * setting the input.
      * @param input string is the parameter.
