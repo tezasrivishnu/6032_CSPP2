@@ -13,7 +13,7 @@ class InputValidator {
      * setting the input.
      * @param input string is the parameter.
      */
-    public InputValidator(final String input) {
+    public InputValidator(String input) {
         this.input = input;
     }
     /**
@@ -33,6 +33,10 @@ class InputValidator {
  * Class for printing the answer.
  */
 public class Solution {
+    /**
+     * main function.
+     * @param args is the parameter.
+     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
