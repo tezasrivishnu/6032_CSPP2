@@ -31,7 +31,13 @@ class InputValidator {
 /**
  * Class for printing the answer.
  */
-public class Solution {
+public final class Solution {
+    /**
+     * empty constructor.
+     */
+    private Solution() {
+        //not using.
+    }
     /**
      * main function.
      * @param args is the parameter.
