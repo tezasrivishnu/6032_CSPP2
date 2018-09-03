@@ -16,7 +16,7 @@ class InputValidator {
      * setting the input.
      * @param input string is the parameter.
      */
-    public InputValidator(String input) {
+    public InputValidator(final String input) {
         this.input = input;
     }
     /**
@@ -27,9 +27,7 @@ class InputValidator {
     public static boolean validateData(final String input) {
         if (input.length() >= SIX) {
             return true;
-        } else {
-            return false;
-        }
+        } else return false;
     }
 }
 /**
