@@ -25,11 +25,7 @@ class InputValidator {
      * @return boolean value.
      */
     public static boolean validateData(final String input) {
-        if (input.length() >= SIX) {
-            return true;
-        } else {
-            return false;
-        }
+        return (input.length() >= SIX);
     }
 }
 /**
