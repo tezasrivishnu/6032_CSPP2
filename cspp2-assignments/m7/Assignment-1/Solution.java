@@ -16,8 +16,8 @@ class InputValidator {
      * setting the input.
      * @param inp string is the parameter.
      */
-    public InputValidator(final String inp) {
-        this.input = inp;
+    public InputValidator(final String input) {
+        this.input = input;
     }
     /**
      * validating the data.
