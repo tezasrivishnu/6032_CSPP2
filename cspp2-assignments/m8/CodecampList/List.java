@@ -136,10 +136,10 @@ public class List {
         } else {
             for (j = 0; j < i - 1; j++) {
                 if ( j + 1 == index) {
-                    a[j] = a[j + 1];
+                    a[j] = 0;
                     l = 1;
                 } if (l == 1) {
-                    a[j + 1] = a[j + 2];
+                    a[j] = a[j + 1];
                 }
             }
             i -= 1;
