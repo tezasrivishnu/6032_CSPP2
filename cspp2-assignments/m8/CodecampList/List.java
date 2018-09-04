@@ -223,7 +223,7 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         int j;
-        int z = 0;
+        int z = -1;
         for (j = 0; j < a.length; j++) {
             if ( a[j] == item) {
                 z =  j;
