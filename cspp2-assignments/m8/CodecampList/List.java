@@ -278,28 +278,28 @@ public class List {
             }
         } return z;
     }
-    public void addAll(int[] items) {
-        int g = items.length;
-        int in = 0;
-        for (int j = i; j < a.length ; j++) {
-            a[i] = items[in];
-            in += 1;
-        }
-    }
-    public void add(int index, int item) {
-        for (int j = i; j < index ; j--) {
-            a[j] = a[j + 1];
-        }
-        a[index] = item;
-    }
-    public int count(int item) {
-        int count = 0;
-        for (int j = 0; j < i ; j++) {
-            if (a[j] == item) {
-                count += 1;
-            }
-        } return count;
-    }
+    // public void addAll(int[] items) {
+    //     int g = items.length;
+    //     int in = 0;
+    //     for (int j = i; j < a.length ; j++) {
+    //         a[i] = items[in];
+    //         in += 1;
+    //     }
+    // }
+    // public void add(int index, int item) {
+    //     for (int j = i; j < index ; j--) {
+    //         a[j] = a[j + 1];
+    //     }
+    //     a[index] = item;
+    // }
+    // public int count(int item) {
+    //     int count = 0;
+    //     for (int j = 0; j < i ; j++) {
+    //         if (a[j] == item) {
+    //             count += 1;
+    //         }
+    //     } return count;
+    // }
     /**
      * main function.
      * @param      args is the input parameter.
