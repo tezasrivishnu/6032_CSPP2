@@ -137,7 +137,7 @@ public class List {
 			for (j = 0; j < i - 1; j++) {
 				if ( j + 1 == index) {
 					a[j] = 0;
-					l = j;
+					l = j+1;
 				}
 			}
 			for (int y = l; y < a.length-1 ; y++ ) {
