@@ -1,9 +1,14 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * @author tezasrivishnu
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
-    private static int TEN = 10;
+    /**
+    * setting value of 10.
+    */
+    private static final int TEN = 10;
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -41,8 +46,8 @@ public class List {
      * denotes the number of items in the list. Makes sense?
      * Here is an example:
      * array = [1,2,3,0,0,0,0,0,0,0]
-     * The length of the array is 10 and size is 3.
-     * This means you can store 10 items in the list and
+     * The length of the array is TEN and size is 3.
+     * This means you can store TEN items in the list and
      * currently it has 3 items.
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
@@ -53,7 +58,7 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -63,8 +68,8 @@ public class List {
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
-        // it should be initialized with an array size like 10
-        a = new int[10];
+        // it should be initialized with an array size like TEN
+        a = new int[TEN];
         i = 0;
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -84,9 +89,13 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * adding elements.
+     * @param      item  is the parameter.
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        if (i < 10) {
+        if (i < TEN) {
             a[i] = item;
             i += 1;
         }
@@ -99,6 +108,9 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * @return     the size of array.
      */
     public int size() {
         // replace the code below to implement the size method
@@ -130,6 +142,10 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * removing the element at index.
+     * @param      index  is the parameter.
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -139,7 +155,7 @@ public class List {
             System.out.println("Invalid Position Exception");
         } else {
             for (j = 0; j < i - 1; j++) {
-                if ( j + 1 == index) {
+                if (j + 1 == index) {
                     a[j + 1] = 0;
                     l = j + 1;
                 }
@@ -162,6 +178,11 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * getting a element at a index.
+     * @param      index  is the input parameter.
+     * @return     the value at index.
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
@@ -193,6 +214,10 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code
         int b;
@@ -210,6 +235,11 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * checking if item is present in array.
+     * @param      item  Tis the input parameter.
+     * @return     boolean value.
+     */
     public boolean contains(final int item) {
         boolean f = false;
         for (int j = 0; j < a.length; j++) {
@@ -226,6 +256,11 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     * @param      item is the input parameter.
+     * @return     the value of index.
+     */
     public int indexOf(final int item) {
         // Replace the code below
         int j;
@@ -236,8 +271,10 @@ public class List {
             }
         } return z;
     }
-
-
+    /**
+     * main function.
+     * @param      args is the input parameter.
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -278,6 +315,8 @@ public class List {
                 break;
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+            default:
                 break;
             }
         }
