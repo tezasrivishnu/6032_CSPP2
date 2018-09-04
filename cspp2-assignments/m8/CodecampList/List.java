@@ -136,15 +136,15 @@ public class List {
 		} else {
 			for (j = 0; j < i - 1; j++) {
 				if ( j + 1 == index) {
-					a[j+1] = 0;
-					l = j+1;
+					a[j + 1] = 0;
+					l = j + 1;
 				}
 			}
-			for (int y = l; y < a.length-1 ; y++ ) {
+			for (int y = l; y < a.length - 1 ; y++ ) {
 				a[y] = a[y + 1];
 			}
+			i -= 1;
 		}
-		i -= 1;
 	} //System.out.println(Arrays.toString(a));
 
 
