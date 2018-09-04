@@ -139,7 +139,7 @@ public class List {
                     a[j] = 0;
                     l = 1;
                 } if (l == 1) {
-                    a[j] = a[j + 1];
+                    a[j+1] = a[j + 2];
                 }
             }
             i -= 1;
