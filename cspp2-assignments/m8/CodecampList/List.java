@@ -36,7 +36,7 @@ public class List {
     private int[] a;
     // declare a private int[]
     // don't create the array yet using new
-    // that's the job of the List 
+    // that's the job of the List
     // constructor
     /**
     * initializing i.
