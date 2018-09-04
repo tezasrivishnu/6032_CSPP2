@@ -136,7 +136,7 @@ public class List {
 		} else {
 			for (j = 0; j < i - 1; j++) {
 				if ( j + 1 == index) {
-					a[j] = 0;
+					a[j+1] = 0;
 					l = j+1;
 				}
 			}
