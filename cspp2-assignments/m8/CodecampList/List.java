@@ -30,10 +30,17 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    /**
+     * empty array.
+     */
     private int[] a;
     // declare a private int[]
     // don't create the array yet using new
-    // that's the job of the List constructor
+    // that's the job of the List 
+    // constructor
+    /**
+    * initializing i.
+    */
     private int i;
     /*
      * What are the other class variables needed for creating a list?
