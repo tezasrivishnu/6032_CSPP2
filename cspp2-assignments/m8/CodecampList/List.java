@@ -140,7 +140,7 @@ public class List {
 					l = j;
 				}
 			}
-			for (int y = l; y < a.length ; y++ ) {
+			for (int y = l; y < a.length-1 ; y++ ) {
 				a[y] = a[y + 1];
 			}
 		}
