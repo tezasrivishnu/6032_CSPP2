@@ -1,10 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
-
+    private static int TEN = 10;
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -85,7 +84,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (i < 10) {
             a[i] = item;
@@ -103,7 +102,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        if ( i == 0) {
+        if (i == 0) {
             return 0;
         } else {
             return i;
@@ -131,7 +130,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         int j;
@@ -145,7 +144,7 @@ public class List {
                     l = j + 1;
                 }
             }
-            for (int y = l; y < a.length - 1 ; y++ ) {
+            for (int y = l; y < a.length - 1; y++) {
                 a[y] = a[y + 1];
             }
             i -= 1;
@@ -164,7 +163,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index > i) {
             return -1;
@@ -211,10 +210,10 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         boolean f = false;
         for (int j = 0; j < a.length; j++) {
-            if ( a[j] == item) {
+            if (a[j] == item) {
                 f = true;
                 break;
             }
@@ -227,19 +226,19 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         int j;
         int z = -1;
         for (j = 0; j < i; j++) {
-            if ( a[j] == item) {
-                z =  j;
+            if (a[j] == item) {
+                z = j;
             }
         } return z;
     }
 
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
