@@ -103,7 +103,12 @@ public class List {
 	 */
 	public int size() {
 		// replace the code below to implement the size method
-		return i;
+		if ( i == 0) {
+			return 0;
+		} else {
+			return i;
+		}
+
 	}
 
 	/*
