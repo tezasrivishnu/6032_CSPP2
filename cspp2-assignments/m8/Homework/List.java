@@ -36,6 +36,7 @@ public final class List {
     * initializing the array.
     */
     private int[] list;
+    private static int TEN = 10;
 
     /*
      * What are the other class variables needed for creating a list?
@@ -81,7 +82,7 @@ public final class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[TEN];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -289,6 +290,9 @@ public final class List {
                 str = str + list[i] + ",";
             }
             str = str + list[i] + "]";
+            if (list[0]==0){
+                str += "Invalid Position Exception";
+            }
             return str;
         }
     }
@@ -426,7 +430,7 @@ public final class List {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    int temp[] = new int[t1.length];
+                    int[] temp = new int[t1.length];
                     for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
                     }
