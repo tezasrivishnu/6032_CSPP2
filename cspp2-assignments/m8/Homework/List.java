@@ -39,7 +39,7 @@ public final class List {
     /**
      * setting value of 10.
      */
-    private static int TEN = 10;
+    private static final int TEN = 10;
 
     /*
      * What are the other class variables needed for creating a list?
