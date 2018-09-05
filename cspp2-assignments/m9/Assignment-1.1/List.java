@@ -95,8 +95,9 @@ public class List {
      */
 
     // todo - add an overloaded constructor here
-    public List(int size) {
-        list = new int[size*2];
+    public List(int n) {
+        size = 0;
+        list = new int[n];
     }
     
     /*

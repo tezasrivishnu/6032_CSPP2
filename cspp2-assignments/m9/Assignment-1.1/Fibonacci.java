@@ -32,7 +32,7 @@ public class Fibonacci {
      * @param      n     int is the input.
      */
     public static List fib(final int n) {
-        List l = new List();
+        List l = new List(n);
         int[] a = new int[n];
         a[0] = 0;
         a[1] = 1;
