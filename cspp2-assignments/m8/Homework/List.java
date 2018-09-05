@@ -1,8 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
-public class List {
+/**
+ * @author tezasrivishnu.
+ */
+public final class List {
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -30,6 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    * initializing the array.
+    */
     private int[] list;
 
     /*
@@ -55,6 +60,9 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    *initializing size.
+    */
     private int size;
 
     /*
@@ -63,7 +71,9 @@ public class List {
      */
 
 
-
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -94,7 +104,12 @@ public class List {
      * constructor.
      *
      */
-    public List(int capacity) {
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  is the input parameter.
+     */
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -110,7 +125,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**
+     * adding a element into array.
+     * @param      item  is the input parameter.
+     */
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
@@ -155,11 +174,19 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * checking the size.
+     *
+     * @return int value.
+     */
     public int size() {
         return size;
     }
-
-    private void resize(int item) {
+    /**
+     * resizing the array.
+     * @param      item  is the input parameter.
+     */
+    private void resize(final int item) {
         list = Arrays.copyOf(list, size + 2);
         list[size++] = item;
     }
@@ -184,8 +211,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
-    public void remove(int index) {
+    /**
+     * removing a element.
+     * @param      index  is the input parameter.
+     */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index <= size) {
@@ -210,7 +240,12 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    /**
+     * getting the value at a particular index.
+     * @param      index  is the input parameter.
+     * @return     the value.
+     */
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -238,6 +273,10 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0)
             return "[]";
@@ -256,7 +295,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * check if element is present or not.
+     *
+     * @param      item  is the input parameter.
+     * @return     true or false.
+     */
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -265,7 +310,12 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * Searches index for the first match.
+     * @param      item  is the input parameter.
+     * @return     index value.
+     */
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i])
                 return i;
@@ -274,17 +324,20 @@ public class List {
     }
     /*Inserts all the elements of specified int
      array to the end of list*/
-    public void addAll(int items[]) {
+     /**
+      * add all the elements of a array in a array.
+      */
+    public void addAll(final int[] items) {
         int g = items.length;
         int in = 0;
         if ((size + g) <= list.length) {
-            for (int j = size; j < (size + g) ; j++) {
+            for (int j = size; j < (size + g); j++) {
                 list[j] = items[in];
                 in += 1;
             }
             size += g;
         } else {
-            for (int i = 0; i < g ; i++) {
+            for (int i = 0; i < g; i++) {
                 resize(items[i]);
             }
         }
@@ -295,9 +348,14 @@ public class List {
     by moving all the elements to the right.
            The method returns void (nothing)
         */
-    public void add(int index, int item) {
+    /**
+     * adding a element at a particular index.
+     * @param      index  is the input parameter.
+     * @param      item   is the input parameter.
+     */
+    public void add(final int index, final int item) {
         if (index >= 0 && size < list.length ) {
-            for (int j = size - 1; j >= index ; j--) {
+            for (int j = size - 1; j >= index; j--) {
                 list[j + 1] = list[j];
             }
             list[index] = item;
@@ -310,18 +368,26 @@ public class List {
     }
 
     /* Returns the count of occurances of a given item in the list*/
-    public int count(int item) {
+    /**
+     * count the elements in array.
+     * @param      item  is the input parameter.
+     * @return     the count of a element.
+     */
+    public int count(final int item) {
         // write the logic
         int count = 0;
-        for (int j = 0; j < size ; j++) {
+        for (int j = 0; j < size; j++) {
             if (list[j] == item) {
                 count += 1;
             }
         } return count;
     }
 
-
-    public static void main(String[] args) {
+    /**
+     * main function.
+     * @param      args  is the input parameter.
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
