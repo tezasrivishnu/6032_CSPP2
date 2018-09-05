@@ -23,7 +23,7 @@ public class Fibonacci {
     /**
      * Constructs the object.
      */
-    public void Fibnocci() {
+    public Fibonacci() {
         //not using.
     }
     /*
