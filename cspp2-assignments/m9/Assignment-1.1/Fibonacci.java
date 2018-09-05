@@ -19,7 +19,13 @@ import java.util.Scanner;
  * Class for fibonacci.
  * @author tezasrivishnu.
  */
-class Fibonacci {
+public class Fibonacci {
+    /**
+     * Constructs the object.
+     */
+    public void Fibnocci() {
+        //not using.
+    }
     /*
      * fib is a static method takes a argument n.
      * n is the count of the fibonacci numbers to be generated.
