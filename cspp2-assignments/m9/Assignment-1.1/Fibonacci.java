@@ -41,7 +41,7 @@ public class Fibonacci {
         for (i = 2; i < n; i++ ) {
             a[i] = a[i - 1] + a[i - 2];
         }
-        for (i = 0; i < a.length - 1; i++) {
+        for (i = 0; i < a.length; i++) {
             // str += a[i] + ",";
             l.add(a[i]);
         }
