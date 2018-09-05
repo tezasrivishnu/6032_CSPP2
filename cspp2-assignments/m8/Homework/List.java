@@ -36,6 +36,9 @@ public final class List {
     * initializing the array.
     */
     private int[] list;
+    /**
+     * setting value of 10.
+     */
     private static int TEN = 10;
 
     /*
