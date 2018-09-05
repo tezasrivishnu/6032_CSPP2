@@ -95,7 +95,9 @@ public class List {
      */
 
     // todo - add an overloaded constructor here
-
+    public List(int size) {
+        list = new int[size*2];
+    }
     
     /*
      * The add method does what the name suggests.
