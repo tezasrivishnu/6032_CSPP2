@@ -11,7 +11,7 @@ class Student {
     private String name;
     /**
      * Constructs the object.
-     * @param      name  is parameter.
+     * @param      nam  is parameter.
      */
     Student(final String nam) {
     //A constructor used to initialize the instance variables
