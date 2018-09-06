@@ -29,7 +29,7 @@ class Student {
      * hashcode function.
      * @return     zero int value.
      */
-    public int hashcode() {
+    public int hashCode() {
         return 0;
     }
     @Override
