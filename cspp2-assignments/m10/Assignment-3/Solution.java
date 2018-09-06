@@ -25,7 +25,6 @@ class Student {
     //Getter method which returns the value of instance variable
         return this.name;
     }
-    @Override
     /**
      * checks if value is present in array or not.
      * @param     other  is the input parameter.
