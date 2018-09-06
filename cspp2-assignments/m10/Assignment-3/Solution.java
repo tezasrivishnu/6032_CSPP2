@@ -26,6 +26,14 @@ class Student {
         return this.name;
     }
     /**
+     * hashcode function.
+     * @return     zero int value.
+     */
+    public int hashcode() {
+        return 0;
+    }
+    @Override
+    /**
      * checks if value is present in array or not.
      * @param     other  is the input parameter.
      * @return     boolean value.
