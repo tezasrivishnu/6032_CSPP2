@@ -52,8 +52,8 @@ public class List<E> {
         int in = 0;
         if ((size + g) <= list.length) {
             for (int j = size; j < (size + g) ; j++) {
-                // list[j] = items[in];
-                add(items[in]);
+                list[j] = items[in];
+                // add(items[in]);
                 in += 1;
             }
             size += g;
