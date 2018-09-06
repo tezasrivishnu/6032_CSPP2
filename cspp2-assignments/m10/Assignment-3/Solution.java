@@ -6,12 +6,6 @@ import java.util.Scanner;
 */
 class Student {
     /**
-     * Constructs the object.
-     */
-    private Student() {
-        //not using.
-    }
-    /**
      * initializing name.
      */
     private String name;
@@ -19,7 +13,7 @@ class Student {
      * Constructs the object.
      * @param      name  is parameter.
      */
-    public Student(String name) {
+    public Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -56,7 +50,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -67,7 +61,7 @@ public class Solution {
      * main method.
      * @param      args  is the input parameter.
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
@@ -109,20 +103,20 @@ public class Solution {
                     System.out.println(listString);
                     break;
                 case "remove":
-                    listString.remove
-                        (Integer.parseInt(tokens[1]));
+                    listString.remove(
+                        Integer.parseInt(tokens[1]));
                     break;
                 case "indexOf":
-                    System.out.println
-                        (listString.indexOf(tokens[1]));
+                    System.out.println(
+                        listString.indexOf(tokens[1]));
                     break;
                 case "get":
                     System.out.println(listString.get(
                         Integer.parseInt(tokens[1])));
                     break;
                 case "contains":
-                    System.out.println
-                        (listString.contains(tokens[1]));
+                    System.out.println(
+                        listString.contains(tokens[1]));
                     break;
                 default:
                 break;
@@ -227,17 +221,17 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method 
+                    // invoke size method
                     // and print the list size
                     // BTW, list size is not the array size
                     // it is the number of items in the list
                     System.out.println(listFloat.size());
                     break;
                 case "print":
-                    // print the list 
+                    // print the list
                     // (implement toString in List class
                     //for this to work)
-                    // expected format is 
+                    // expected format is
                     // [item-1,item-2,...,item-n]
                     // review the output testcase file
                     System.out.println(listFloat);
@@ -302,7 +296,7 @@ public class Solution {
                     // print the list (
                     // implement toString in List class
                     //for this to work)
-                    // expected format is 
+                    // expected format is
                     // [item-1,item-2,...,item-n]
                     // review the output testcase file
                     System.out.println(listCharacter);
@@ -346,7 +340,7 @@ public class Solution {
                 case "addAll":
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        Double[] temp = new 
+                        Double[] temp = new
                             Double[t1.length];
                         for (int i = 0; i
                             < t1.length; i++) {
@@ -357,14 +351,14 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method 
+                    // invoke size method
                     // and print the list size
                     // BTW, list size is not the array size
                     // it is the number of items in the list
                     System.out.println(listDouble.size());
                     break;
                 case "print":
-                    // print the list (implement 
+                    // print the list (implement
                     // toString in StringList class
                     //for this to work)
                     // expected format is [item-1,
@@ -396,7 +390,7 @@ public class Solution {
                 }
             }
             break;
-        case "O"://This case will be executed 
+        case "O"://This case will be executed
         //for Student type list i.e to store List of Student Objects
             List<Student> listStudent = new List();
             while (stdin.hasNext()) {
@@ -404,7 +398,7 @@ public class Solution {
                 String line = stdin.nextLine();
                 // split the line using space
                 String[] tokens = line.split(" ");
-                // based on the list operation invoke 
+                // based on the list operation invoke
                 //the corresponding method
                 switch (tokens[0]) {
                 case "add":
@@ -425,7 +419,7 @@ public class Solution {
                     }
                     break;
                 case "size":
-                    // invoke size method and 
+                    // invoke size method and
                     // print the list size
                     // BTW, list size is not the array size
                     // it is the number of items in the list
