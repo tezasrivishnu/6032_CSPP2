@@ -13,7 +13,7 @@ class Student {
      * Constructs the object.
      * @param      name  is parameter.
      */
-    public Student(final String name) {
+    Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
