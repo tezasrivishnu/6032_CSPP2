@@ -74,7 +74,7 @@ public class List<E> {
         return size;
     }
     private void resize(E item) {
-        list = Arrays.copyOf(list, size + 2);
+        list = Arrays.copyOf(list, list.length + 2);
         list[size++] = item;
     }
     /*
