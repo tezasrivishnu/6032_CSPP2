@@ -63,7 +63,7 @@ class Student {
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
     /**
      * method to execute integer.
      *
