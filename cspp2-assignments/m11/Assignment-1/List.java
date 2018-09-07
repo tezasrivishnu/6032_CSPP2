@@ -376,8 +376,8 @@ public class List {
         while (end - start >= 0) {
             int[] list = new int[end - start];
             List newlist = new List();
-            if ((start == end) || start < i || end < i ||
-                start > a.length || end > a.length || start>end || end - start != 0) {
+            if ((start == end) || start < 0 || end < 0 ||
+                start > a.length || end > a.length || start>end || (end - start != 0)) {
                 System.out.println(
                     "Index Out of Bounds Exception");
                 return null;
