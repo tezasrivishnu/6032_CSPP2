@@ -269,9 +269,9 @@ public class List {
             emp += a[b] + ",";
         }
         emp += a[b] + "]";
-        if (i == 0) {
-            emp = "[]";
-        }
+        // if (i == 0) {
+        //     emp = "[]";
+        // }
         return emp;
     }
     /*
