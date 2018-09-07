@@ -237,10 +237,10 @@ public class List<E> {
         for (int r = 0; r < listdata.size(); r++) {
             if (list[r] == listdata.get(j)) {
                 j += 1;
-                if (j == listdata.size()) {
-                    f = true;
-                }
             }
+        }
+        if (j >= listdata.size()) {
+            f = true;
         }
         return f;
     }
