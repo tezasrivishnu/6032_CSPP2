@@ -191,26 +191,23 @@ public class List {
         // Think about what to do to the size
         // variable.
         // int j;
-        if (a.length == 1) {
-            System.out.println("[]");
+        int l = 0;
+        if (index > a.length) {
+            System.out.println("Invalid Position Exception");
         } else {
-            int l = 0;
-            if (index > a.length) {
-                System.out.println("Invalid Position Exception");
-            } else {
-                for (int j = 0; j < i - 1; j++) {
-                    if (j + 1 == index) {
-                        a[j + 1] = 0;
-                        l = j + 1;
-                    }
+            for (int j = 0; j < i - 1; j++) {
+                if (j + 1 == index) {
+                    a[j + 1] = 0;
+                    l = j + 1;
                 }
-                for (int y = l; y < a.length - 1; y++) {
-                    a[y] = a[y + 1];
-                }
-                i -= 1;
             }
+            for (int y = l; y < a.length - 1; y++) {
+                a[y] = a[y + 1];
+            }
+            i -= 1;
         }
     }
+
 
     /*
      * Get method has to return the items
@@ -354,11 +351,18 @@ public class List {
      * @param      newArray  is the input array.
      */
     public void removeAll(final int[] newArray) {
+        // for (int r = 0; r < newArray.length; r++) {
+        //     for (int e = 0; e < i; e++) {
+        //         if (newArray[r] == get(e)) {
+        //             remove(e);
+        //         }
+        //     }
+        // }
         for (int r = 0; r < newArray.length; r++) {
-            for (int e = 0; e < i; e++) {
-                if (newArray[r] == get(e)) {
-                    remove(e);
-                }
+            int index = indexOf(newArray[i]);
+            while (index != -1) {
+                remove(i);
+                index = index = indexOf(newArray[i]);
             }
         }
     }
@@ -382,7 +386,7 @@ public class List {
             List newlist = new List();
             if ((start == end) || start < 0 || end < 0 ||
                     start > a.length || end > a.length
-                    || start > end || (end - start < 0) || size() == 0) {
+                    || size() == 0) {
                 System.out.println(
                     "Index Out of Bounds Exception");
                 return null;
