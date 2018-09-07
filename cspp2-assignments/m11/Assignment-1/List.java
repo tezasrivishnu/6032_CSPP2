@@ -377,15 +377,15 @@ public class List {
             int[] list = new int[end - start];
             List newlist = new List();
             if ((start == end) && (start < 0 && end < 0)) {
-                System.out.println
-                ("Index Out of Bounds Exception");
+                System.out.println(
+                    "Index Out of Bounds Exception");
                 return null;
             } else if (start == end) {
                 return newlist;
             } else if (start < 0 || end < 0
                 || start > a.length || end > a.length) {
-                System.out.println
-                ("Index Out of Bounds Exception");
+                System.out.println(
+                "Index Out of Bounds Exception");
                 return null;
             } else if ((start >= 0 && start < end)
                 && (end > 0 && end > start && end < a.length)) {
@@ -514,14 +514,12 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": 
-            {
+            case "subList": {
                 if (tokens.length != 2) {
-                    break;
-                };
+                    break;}
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.
-                    parseInt(arrstring3[0]),Integer.
+                    parseInt(arrstring3[0]), Integer.
                     parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
