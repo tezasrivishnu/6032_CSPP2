@@ -252,8 +252,11 @@ public class List {
 	 array.
 	*/
 	public void removeAll(int[] newArray) {
-		// write the logic
-
+		for (int r = 0; r < newArray.length; r++) {
+			if (indexOf(newArray[r]) != -1) {
+				remove(indexOf(newArray[r]));
+			}
+		}
 	}
 	/*
 	Returns a list object containing elements, including startIndex and
@@ -281,16 +284,28 @@ public class List {
 	exactly matching with the given list or not.
 	*/
 	public boolean equals(List list) {
-		
-		return true;
-}
-/*
-* Removes all the elements from list
-* Think about this case and make the method
-* the simpler.
-*/
-public void clear() {
-
+		int j = 0;
+		boolean f = false;
+		for (int r = 0; r < a.length; r++) {
+			if (a[r] == list.get(j)) {
+				j += 1;
+				if (j == list.size()) {
+					f = true;
+					break;
+				}
+			} else {
+				j = 0;
+			}
+		}
+		return f;
+	}
+	/*
+	* Removes all the elements from list
+	* Think about this case and make the method
+	* the simpler.
+	*/
+	public void clear() {
+		i = 0;
 	}
 
 	public static void main(String[] args) {
