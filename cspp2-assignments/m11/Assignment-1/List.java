@@ -197,7 +197,7 @@ public class List {
 			emp += a[b] + ",";
 		}
 		emp += a[b] + "]";
-		if (a[0]==0){
+		if (i==0){
 			emp = "[]";
 		}
 		return emp;
