@@ -359,10 +359,10 @@ public class List {
         //     }
         // }
         for (int r = 0; r < newArray.length; r++) {
-            int index = indexOf(newArray[i]);
+            int index = indexOf(newArray[r]);
             while (index != -1) {
                 remove(i);
-                index = index = indexOf(newArray[i]);
+                index = index = indexOf(newArray[r]);
             }
         }
     }
