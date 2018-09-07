@@ -362,7 +362,7 @@ public class List {
             int index = indexOf(newArray[r]);
             while (index != -1) {
                 remove(i);
-                index = index = indexOf(newArray[r]);
+                index = indexOf(newArray[r]);
             }
         }
     }
@@ -384,8 +384,8 @@ public class List {
         while (end - start >= 0) {
             int[] list = new int[end - start];
             List newlist = new List();
-            if ((start == end) || start < 0 || end < 0 ||
-                    start > a.length || end > a.length
+            if ((start == end) || start < 0 || end < 0
+                || start > a.length || end > a.length
                     || size() == 0) {
                 System.out.println(
                     "Index Out of Bounds Exception");
@@ -519,7 +519,7 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": {
+            case "subList": 
                 if (tokens.length != 2) {
                     break;
                 }
@@ -531,7 +531,6 @@ public class List {
                     System.out.println(object);
                 }
                 break;
-            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
