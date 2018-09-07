@@ -118,7 +118,7 @@ public class List {
 		}
 	}
 	private void resize(int item) {
-		a = Arrays.copyOf(a, i * 2);
+		a = Arrays.copyOf(a, i + 2);
 		a[i] = item;
 		i += 1;
 	}
