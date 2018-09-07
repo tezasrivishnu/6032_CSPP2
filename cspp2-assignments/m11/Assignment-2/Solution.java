@@ -63,7 +63,13 @@ class Student {
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
+    /**
+     * Constructs the object.
+     */
+    public Solution() {
+        //not using.
+    }
     /**
      * method to execute integer.
      *
