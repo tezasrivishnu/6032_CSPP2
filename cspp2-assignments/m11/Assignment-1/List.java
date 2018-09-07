@@ -272,6 +272,7 @@ public class List {
 			return newlist;
 		} else if (start < 0 || end < 0 || start > a.length || end > a.length) {
 			System.out.println("Index Out of Bounds Exception");
+			return null;
 		} else if ((start >= 0 && start < end) && (end > 0 && end > start && end < a.length)) {
 			int h = 0;
 			for (h = start ; h < end; h++) {
