@@ -12,7 +12,7 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  is the input parameter.
+     * @param      nam is the input parameter.
      */
     Student(final String nam) {//A constructor used to
         //initialize the instance variables
@@ -126,7 +126,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for(int i = 0; i < t2.length; i++) {
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
