@@ -197,7 +197,7 @@ public class List {
 			emp += a[b] + ",";
 		}
 		emp += a[b] + "]";
-		if (i==0){
+		if (i == 0) {
 			emp = "[]";
 		}
 		return emp;
@@ -306,11 +306,8 @@ public class List {
 					f = true;
 					break;
 				}
-			} else {
-				j = 0;
 			}
-		}
-		return f;
+		} return f;
 	}
 	/*
 	* Removes all the elements from list
