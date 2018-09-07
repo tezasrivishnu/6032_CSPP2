@@ -14,7 +14,8 @@ class Student {
      *
      * @param      nam is the input parameter.
      */
-    Student(final String nam) {//A constructor used to
+    Student(final String nam) {
+    //A constructor used to
         //initialize the instance variables
         this.name = nam;
     }
@@ -23,7 +24,8 @@ class Student {
      *
      * @return     string.
      */
-    public String getName() {//Getter method which
+    public String getName() {
+    //Getter method which
         //returns the value of instance variable
         return this.name;
     }
