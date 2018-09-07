@@ -191,20 +191,24 @@ public class List {
         // Think about what to do to the size
         // variable.
         // int j;
-        int l = 0;
-        if (index > a.length) {
-            System.out.println("Invalid Position Exception");
+        if (i == 1) {
+            System.out.println("[]");
         } else {
-            for (int j = 0; j < i - 1; j++) {
-                if (j + 1 == index) {
-                    a[j + 1] = 0;
-                    l = j + 1;
+            int l = 0;
+            if (index > a.length) {
+                System.out.println("Invalid Position Exception");
+            } else {
+                for (int j = 0; j < i - 1; j++) {
+                    if (j + 1 == index) {
+                        a[j + 1] = 0;
+                        l = j + 1;
+                    }
                 }
+                for (int y = l; y < a.length - 1; y++) {
+                    a[y] = a[y + 1];
+                }
+                i -= 1;
             }
-            for (int y = l; y < a.length - 1; y++) {
-                a[y] = a[y + 1];
-            }
-            i -= 1;
         }
     }
 
