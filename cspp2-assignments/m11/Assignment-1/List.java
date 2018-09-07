@@ -240,7 +240,7 @@ public class List {
 		int in = 0;
 		if ((i + g) <= a.length) {
 			for (int j = i; j < (i + g) ; j++) {
-				a[i] = newArray[in];
+				a[j] = newArray[in];
 				in += 1;
 			}
 			i += g;
