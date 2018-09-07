@@ -299,15 +299,17 @@ public class List {
 	public boolean equals(List list) {
 		int j = 0;
 		boolean f = false;
-		for (int r = 0; r < a.length; r++) {
-			if (a[r] == list.get(j)) {
-				j += 1;
-				if (j == list.size()) {
-					f = true;
-					break;
+		for (int r = 0; r < list.size(); r++) {
+			for (int e = 0; e < a.length; e++ ) {
+				if (a[e] == list.get(r)) {
+					j += 1;
 				}
 			}
-		} return f;
+		}
+		if (j == list.size()) {
+			f = true;
+		}
+		return f;
 	}
 	/*
 	* Removes all the elements from list
