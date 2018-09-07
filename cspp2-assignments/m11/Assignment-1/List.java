@@ -271,10 +271,8 @@ public class List {
 			System.out.println("Index Out of Bounds Exception");
 		} else if ((start >= 0 && start < end) && (end > 0 && end > start && end < a.length)) {
 			int h = 0;
-			int in = 0;
 			for (h = start ; h < end; h++) {
-				newlist.add(a[start]);
-				in += 1;
+				newlist.add(a[h]);
 			}
 		} return newlist;
 	}
