@@ -203,17 +203,21 @@ public class List<E> {
      */
     public List subList(int n, int n2) {
     	while (n2 - n >= 0) {
-            int[] list = new int[n2 - n];
+            int[] a = new int[n2 - n];
             List newlist = new List();
-            if ((n == n2) || n < 0 || n2 < 0 ||
-                    n > list.length || n2 > list.length
-                    || n > n2 || (n2 - n < 0) || size() == 0) {
+            if ((n == n2) && (n < 0 && n2 < 0)) {
                 System.out.println(
                     "Index Out of Bounds Exception");
                 return null;
-            } else {
-                // } else if ((start >= 0 && start < end)
-                //     && (end > 0 && end > start && end < a.length)) {
+            } else if (n == n2) {
+                return newlist;
+            } else if (n < 0 || n2 < 0
+                || n > list.length || n2 > list.length) {
+                System.out.println(
+                "Index Out of Bounds Exception");
+                return null;
+            } else if ((n >= 0 && n < n2)
+                && (n2 > 0 && n2 > n && n2 < list.length)) {
                 int h = 0;
                 for (h = n; h < n2; h++) {
                     newlist.add(list[h]);
@@ -232,13 +236,12 @@ public class List<E> {
         int j = 0;
         boolean f = false;
         for (int r = 0; r < listdata.size(); r++) {
-            if (list[r] == listdata.get(j)) {
+            if (contains(listdata.get(r))) {
                 j += 1;
-                if (j == listdata.size()) {
-                    f = true;
-                    break;
-                }
             }
+        }
+        if (j == listdata.size()) {
+            f = true;
         }
         return f;
     }
