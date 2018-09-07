@@ -300,13 +300,11 @@ public class List {
 		int j = 0;
 		boolean f = false;
 		for (int r = 0; r < list.size(); r++) {
-			for (int e = 0; e < a.length; e++ ) {
-				if (a[e] == list.get(r)) {
-					j += 1;
-				}
+			if (contains(list.get(r))) {
+				j += 1;
 			}
 		}
-		if (j == list.size()) {
+		if (j==list.size()){
 			f = true;
 		}
 		return f;
