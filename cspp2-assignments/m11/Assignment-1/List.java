@@ -245,8 +245,8 @@ public class List {
 			}
 			i += g;
 		} else {
-			for (int i = 0; i < g; i++) {
-				resize(newArray[i]);
+			for (int c = 0; c < g; c++) {
+				resize(newArray[c]);
 			}
 		}
 	}
