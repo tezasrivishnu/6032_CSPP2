@@ -5,11 +5,18 @@ import java.util.Scanner;
 * @author tezasrivishnu.
 */
 class Student {
+    /**
+     * initializing name.
+     */
     private String name;
-
-    public Student(final String name) {//A constructor used to
+    /**
+     * Constructs the object.
+     *
+     * @param      name  is the input parameter.
+     */
+    Student(final String nam) {//A constructor used to
         //initialize the instance variables
-        this.name = name;
+        this.name = nam;
     }
     /**
      * Gets the name.
