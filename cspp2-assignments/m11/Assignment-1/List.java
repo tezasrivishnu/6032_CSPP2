@@ -191,7 +191,7 @@ public class List {
         // Think about what to do to the size
         // variable.
         // int j;
-        if (i == 1) {
+        if (i == 0) {
             System.out.println("[]");
         } else {
             int l = 0;
