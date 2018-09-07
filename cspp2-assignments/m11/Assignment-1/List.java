@@ -253,8 +253,10 @@ public class List {
 	*/
 	public void removeAll(int[] newArray) {
 		for (int r = 0; r < newArray.length; r++) {
-			if (indexOf(newArray[r]) != -1) {
-				remove(indexOf(newArray[r]));
+			for(int e = 0; e<i; e++ ) {
+				if (newArray[r] == a[e]){
+					remove(indexOf(newArray[e]));
+				}
 			}
 		}
 	}
