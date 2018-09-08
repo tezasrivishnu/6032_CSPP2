@@ -67,9 +67,9 @@ class Set {
 			for (int j = size; j < set.length; j++) {
 			
 				if (!(contains(items[in]))) {
-					// System.out.println("true");
-					// System.out.println(size);
-					// System.out.println(in);
+					System.out.println("true");
+					System.out.println(size);
+					System.out.println(items[in]);
 					set[j] = items[in];
 					size += 1;
 				}
@@ -77,9 +77,9 @@ class Set {
 			in += 1;
 			}
 		} else {
-			for (int c = in; c < g; c++) {
-				if (!(contains(items[in]))) {
-					resize(items[in]);
+			for (int c = size; c < set.length; c++) {
+				if (!(contains(items[c]))) {
+					resize(items[c]);
 				}
 			}
 		}
