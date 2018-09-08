@@ -7,13 +7,27 @@ import java.util.Arrays;
  * @author :
  */
 class Set {
+	/**
+	 * initialzing the set array.
+	 */
 	int[] set;
+	/**
+	 * initializing the size.
+	 */
 	int size;
 	private static final int TEN = 10;
+	/**
+	 * Constructs the object.
+	 */
 	public Set() {
 		set = new int[10];
 		size = 0;
 	}
+	/**
+	 * size.
+	 *
+	 * @return  size of array.
+	 */
 	public int size() {
 		if (size == 0) {
 			return 0;
@@ -21,12 +35,22 @@ class Set {
 			return size;
 		}
 	}
+	/**
+	 * resizing for array elements.
+	 *
+	 * @param      item  is the input parameter.
+	 */
 	public void resize(int item) {
 		set = Arrays.copyOf(set, size + 2);
 		set[size] = item;
 		size += 1;
 	}
-	public void resize(int[] items) {
+	/**
+	 * resizing for array elements.
+	 *
+	 * @param      items  is the input parameter.
+	 */
+	public void resize(final int[] items) {
 		set = Arrays.copyOf(set, size + 2);
 		int in = 0;
 		while (in < items.length) {
@@ -39,7 +63,14 @@ class Set {
 			in += 1;
 		}
 	}
-	public boolean contains(int item) {
+	/**
+	 * tells us if item is present in array or not.
+	 *
+	 * @param      item  is the input parameter.
+	 *
+	 * @return     true or false.
+	 */
+	public boolean contains(final int item) {
 		boolean f = false;
 		for (int j = 0; j < set.length; j++) {
 			if (set[j] == item) {
@@ -49,6 +80,11 @@ class Set {
 		}
 		return f;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		int i;
 		String str = "{";
@@ -61,6 +97,11 @@ class Set {
 		}
 		return str;
 	}
+	/**
+	 * adds a element in list.
+	 *
+	 * @param      item  is the input parameter.
+	 */
 	public void add(int item) {
 		if (size < TEN) {
 			set[size] = item;
@@ -69,6 +110,11 @@ class Set {
 			resize(item);
 		}
 	}
+	/**
+	 * adding elelemet array to input array.
+	 *
+	 * @param      items  is the input array.
+	 */
 	public void add(int[] items) {
 		int g = items.length;
 		int in = 0;
@@ -91,7 +137,14 @@ class Set {
 			resize(items);
 		}
 	}
-	public String intersection(Set t) {
+	/**
+	 * intersection method.
+	 *
+	 * @param      t  is the input parameter.
+	 *
+	 * @return     the items common in two sets.
+	 */
+	public String intersection(final Set t) {
 		if (size() == 0 || t.size() == 0) {
 			return "{}";
 		} else {
@@ -119,7 +172,14 @@ class Set {
 			}
 		}
 	}
-	public String retainAll(int[] items) {
+	/**
+	 * retainAll method.
+	 *
+	 * @param      items  is the input parameter.
+	 *
+	 * @return     the items common in two sets.
+	 */
+	public String retainAll(final int[] items) {
 		if (size() == 0 || items.length == 0) {
 			return "{}";
 		} else {
@@ -139,7 +199,7 @@ class Set {
 			} else {
 				int i;
 				String str1 = "{";
-				for ( i = 0; i < l - 1; i++) {
+				for (i = 0; i < l - 1; i++) {
 					str1 += inter[i] + ", ";
 				}
 				str1 += inter[i] + "}";
@@ -147,7 +207,14 @@ class Set {
 			}
 		}
 	}
-	public String cartesianProduct(Set t) {
+	/**
+	 * cartesianProduct methos.
+	 *
+	 * @param      t   is the input parameter.
+	 *
+	 * @return     string value.
+	 */
+	public String cartesianProduct(final Set t) {
 		String str = "[";
 		int i = 0;
 		int j = 0;
@@ -156,7 +223,8 @@ class Set {
 		} else {
 			for (i = 0; i < size() - 1; i++) {
 				for (j = 0; j < t.size - 1; j++) {
-					str += "[" + set[i] + ", " + t.set[j] + "], ";
+					str += "[" + set[i] + ", "
+					+ t.set[j] + "], ";
 				}
 				str += "[" + set[i] + ", " + t.set[j] + "], ";
 			}
@@ -214,13 +282,16 @@ public final class Solution {
 			String line = stdin.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
+			// based on the list operation
+			//invoke the corresponding method
 			switch (tokens[0]) {
 			case "size":
 				System.out.println(s.size());
 				break;
 			case "contains":
-				System.out.println(s.contains(Integer.parseInt(tokens[1])));
+				System.out.println(s.
+					contains(Integer.
+					parseInt(tokens[1])));
 				break;
 			case "print":
 				System.out.println(s);
