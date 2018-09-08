@@ -63,7 +63,7 @@ class Set {
 			for (int j = size; j < (size + g); j++) {
 				if (!(contains(items[in]))) {
 					set[j] = items[in];
-					size += g;
+					size += 1;
 				}
 				in += 1;
 			}
