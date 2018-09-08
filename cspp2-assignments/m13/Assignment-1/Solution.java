@@ -77,9 +77,9 @@ class Set {
 			in += 1;
 			}
 		} else {
-			for (int c = size; c < set.length; c++) {
-				if (!(contains(items[c]))) {
-					resize(items[c]);
+			for (int c = in; c < g; c++) {
+				if (!(contains(items[in]))) {
+					resize(items[in]);
 				}
 			}
 		}
