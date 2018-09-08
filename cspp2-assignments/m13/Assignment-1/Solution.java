@@ -26,6 +26,9 @@ class Set {
 		set[size] = item;
 		size += 1;
 	}
+	public void resize() {
+		set = Arrays.copyOf(set, size + 2);
+	}
 	public boolean contains(int item) {
 		boolean f = false;
 		for (int j = 0; j < set.length; j++) {
@@ -57,19 +60,28 @@ class Set {
 		}
 	}
 	public void add(int[] items) {
+		System.out.println(size);
+		System.out.println(set.length);
 		int g = items.length;
 		int in = 0;
 		if ((size + g) < set.length) {
-			for (int j = size; j < g; j++) {
+			while(in<g){
+			for (int j = size; j < (size+g)-2; j++) {
+			
 				if (!(contains(items[in]))) {
+					System.out.println("true");
+					System.out.println(size);
+					System.out.println(in);
 					set[j] = items[in];
 					size += 1;
 				}
-				in += 1;
+			}
+			in += 1;
 			}
 		} else {
 			for (int c = in; c < g; c++) {
 				if (!(contains(items[in]))) {
+					System.out.println("resize");
 					resize(items[in]);
 				}
 			}
