@@ -26,8 +26,20 @@ class Set {
 		set[size] = item;
 		size += 1;
 	}
-	public void resize() {
+	public void resize(int[] items) {
 		set = Arrays.copyOf(set, size + 2);
+		int in = 0;
+		while (in < items.length) {
+			for (int j = size; j < set.length; j++) {
+				System.out.println("before " + items[in]);
+				if (!(contains(items[in]))) {
+					System.out.println("after " + items[in]);
+					set[j] = items[in];
+					size += 1;
+				}
+			}
+			in += 1;
+		}
 	}
 	public boolean contains(int item) {
 		boolean f = false;
@@ -63,25 +75,24 @@ class Set {
 		int g = items.length;
 		int in = 0;
 		if ((size + g) < set.length) {
-			while(in<g){
-			for (int j = size; j < set.length; j++) {
-			
-				if (!(contains(items[in]))) {
-					// System.out.println("true");
-					// System.out.println(size);
-					// System.out.println(items[in]);
-					set[j] = items[in];
-					size += 1;
+			while (in < g) {
+				for (int j = size; j < set.length; j++) {
+					System.out.println("before " + items[in]);
+					if (!(contains(items[in]))) {
+						System.out.println("after " + items[in]);
+						set[j] = items[in];
+						size += 1;
+					}
 				}
-			}
-			in += 1;
+				in += 1;
 			}
 		} else {
-			for (int c = in; c < g; c++) {
-				if (!(contains(items[in]))) {
-					resize(items[in]);
-				}
-			}
+			// for (int c = in; c < g; c++) {
+			// 	if (!(contains(items[in]))) {
+			// 		resize(items[in]);
+			// 	}
+			// }
+			resize(items);
 		}
 	}
 	public String intersection(Set t) {
@@ -140,8 +151,18 @@ class Set {
 			}
 		}
 	}
-	public int[][] cartesianProduct(Set t){
-		return null;
+	public String cartesianProduct(Set t) {
+		String str = "[";
+		int i = 0;
+		int j = 0;
+		for (i = 0; i < size(); i++) {
+			for (j = 0; j < t.size - 1; j++) {
+				str += "[" + set[i] + ", " + t.set[j] + "], ";
+			}
+			str += "[" + set[i] + ", " + t.set[j] + "], ";
+		}
+		str += "[" + set[i] + ", " + t.set[j] + "]]";
+		return str;
 	}
 }
 /**
@@ -231,7 +252,7 @@ public final class Solution {
 				s.add(intArray);
 				intArray = intArray(tokens[2]);
 				t.add(intArray);
-				System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+				System.out.println(s.cartesianProduct(t));
 				break;
 			default:
 				break;
