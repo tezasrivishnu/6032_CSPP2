@@ -152,7 +152,7 @@ class Set {
 		int i = 0;
 		int j = 0;
 		if (size() == 0 || t.size() == 0) {
-			return "{}";
+			return "null";
 		} else {
 			for (i = 0; i < size() - 1; i++) {
 				for (j = 0; j < t.size - 1; j++) {
@@ -166,6 +166,7 @@ class Set {
 			str += "[" + set[i] + ", " + t.set[j] + "]]";
 			return str;
 		}
+
 	}
 }
 /**
