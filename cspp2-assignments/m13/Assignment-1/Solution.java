@@ -64,7 +64,7 @@ class Set {
 		int in = 0;
 		if ((size + g) < set.length) {
 			while(in<g){
-			for (int j = size; j < (size+g)-1; j++) {
+			for (int j = size; j < set.length; j++) {
 			
 				if (!(contains(items[in]))) {
 					// System.out.println("true");
