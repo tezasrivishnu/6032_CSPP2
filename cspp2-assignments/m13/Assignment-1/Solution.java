@@ -39,7 +39,7 @@ class Set {
 	public String toString() {
 		int i;
 		String str = "{";
-		for (i = 0; i < i - 1; i++) {
+		for (i = 0; i < size - 1; i++) {
 			str += set[i] + ", ";
 		}
 		str += set[i] + "}";
@@ -60,7 +60,7 @@ class Set {
 		int g = items.length;
 		int in = 0;
 		if ((size + g) < set.length) {
-			for (int j = size; j < (size + g); j++) {
+			for (int j = size; j < g; j++) {
 				if (!(contains(items[in]))) {
 					set[j] = items[in];
 					size += 1;
