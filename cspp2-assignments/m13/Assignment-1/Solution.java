@@ -113,7 +113,32 @@ class Set {
 		}
 	}
 	public String retainAll(int[] items) {
-		return null;
+		if (size() == 0 || items.length == 0) {
+			return "{}";
+		} else {
+			int l = 0;
+			int len = Math.abs(size() + items.length);
+			int[] inter = new int[len];
+			for (int i = 0; i < size(); i++) {
+				for (int j = 0; j < items.length; j++) {
+					if (set[i] == items[j]) {
+						inter[l] = set[i];
+						l += 1;
+					}
+				}
+			}
+			if (l == 0) {
+				return "{}";
+			} else {
+				int i;
+				String str1 = "{";
+				for ( i = 0; i < l - 1; i++) {
+					str1 += inter[i] + ", ";
+				}
+				str1 += inter[i] + "}";
+				return str1;
+			}
+		}
 	}
 	public int[][] cartesianProduct(Set t){
 		return null;
