@@ -89,15 +89,16 @@ class Set {
 			return "{}";
 		} else {
 			int l = 0;
-			Set in = new Set();
-			int len = Math.abs(size() - t.size());
+			int len = (Math.abs(size() - t.size())) + 1;
+			System.out.println(len);
 			int[] inter = new int[len];
 			for (int i = 0; i < size(); i++) {
-				System.out.println(i);
+				System.out.println("i "+i);
 				for (int j = 0; j < t.size(); j++) {
-					System.out.println(j);
+					System.out.println(("j "+j));
 					if (set[i] == t.set[j]) {
 						inter[l] = set[i];
+						System.out.println(inter[l]);
 						l += 1;
 					}
 				}
