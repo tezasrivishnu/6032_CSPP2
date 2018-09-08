@@ -94,7 +94,7 @@ class Set {
 			int[] inter = new int[len];
 			System.out.println(set.length);
 			for (int i = 0; i < size; i++) {
-				for (int j = 0; j < t.size(); j++) {
+				for (int j = 0; j <= t.size(); j++) {
 					if (set[i] == t.set[j]) {
 						inter[l] = set[i];
 						l += 1;
