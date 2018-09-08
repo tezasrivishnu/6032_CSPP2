@@ -31,9 +31,7 @@ class Set {
 		int in = 0;
 		while (in < items.length) {
 			for (int j = size; j < set.length; j++) {
-				System.out.println("before " + items[in]);
 				if (!(contains(items[in]))) {
-					System.out.println("after " + items[in]);
 					set[j] = items[in];
 					size += 1;
 				}
