@@ -59,7 +59,7 @@ class Set {
 	public void add(int[] items) {
 		int g = items.length;
 		int in = 0;
-		if ((size + g) <= set.length) {
+		if ((size + g) < set.length) {
 			for (int j = size; j < (size + g); j++) {
 				if (!(contains(items[in]))) {
 					set[j] = items[in];
