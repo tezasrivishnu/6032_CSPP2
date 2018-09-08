@@ -92,7 +92,7 @@ class Set {
 			Set in = new Set();
 			int len = Math.abs(size() - t.size());
 			int[] inter = new int[len];
-			for (int i = 0; i < size; i++) {
+			for (int i = 0; i < size(); i++) {
 				System.out.println(i);
 				for (int j = 0; j < t.size(); j++) {
 					System.out.println(j);
