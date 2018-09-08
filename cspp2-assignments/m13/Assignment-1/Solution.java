@@ -89,16 +89,12 @@ class Set {
 			return "{}";
 		} else {
 			int l = 0;
-			int len = (Math.abs(size() - t.size())) + 1;
-			System.out.println(len);
+			int len = Math.abs(size() + t.size());
 			int[] inter = new int[len];
 			for (int i = 0; i < size(); i++) {
-				System.out.println("i "+i);
 				for (int j = 0; j < t.size(); j++) {
-					System.out.println(("j "+j));
 					if (set[i] == t.set[j]) {
 						inter[l] = set[i];
-						System.out.println(inter[l]);
 						l += 1;
 					}
 				}
@@ -108,7 +104,7 @@ class Set {
 			} else {
 				int i;
 				String str1 = "{";
-				for ( i = 0; i < inter.length - 1; i++) {
+				for ( i = 0; i < l - 1; i++) {
 					str1 += inter[i] + ", ";
 				}
 				str1 += inter[i] + "}";
