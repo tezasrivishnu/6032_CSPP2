@@ -151,14 +151,21 @@ class Set {
 		String str = "[";
 		int i = 0;
 		int j = 0;
-		for (i = 0; i < size(); i++) {
+		if (size() == 0 || t.size() == 0) {
+			return "{}";
+		} else {
+			for (i = 0; i < size() - 1; i++) {
+				for (j = 0; j < t.size - 1; j++) {
+					str += "[" + set[i] + ", " + t.set[j] + "], ";
+				}
+				str += "[" + set[i] + ", " + t.set[j] + "], ";
+			}
 			for (j = 0; j < t.size - 1; j++) {
 				str += "[" + set[i] + ", " + t.set[j] + "], ";
 			}
-			str += "[" + set[i] + ", " + t.set[j] + "], ";
+			str += "[" + set[i] + ", " + t.set[j] + "]]";
+			return str;
 		}
-		str += "[" + set[i] + ", " + t.set[j] + "]]";
-		return str;
 	}
 }
 /**
