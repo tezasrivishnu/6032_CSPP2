@@ -60,13 +60,11 @@ class Set {
 		}
 	}
 	public void add(int[] items) {
-		System.out.println(size);
-		System.out.println(set.length);
 		int g = items.length;
 		int in = 0;
 		if ((size + g) < set.length) {
 			while(in<g){
-			for (int j = size; j < (size+g); j++) {
+			for (int j = size; j < (size+g)-1; j++) {
 			
 				if (!(contains(items[in]))) {
 					// System.out.println("true");
@@ -81,7 +79,6 @@ class Set {
 		} else {
 			for (int c = in; c < g; c++) {
 				if (!(contains(items[in]))) {
-					System.out.println("resize");
 					resize(items[in]);
 				}
 			}
