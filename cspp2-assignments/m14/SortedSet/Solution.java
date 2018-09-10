@@ -94,7 +94,8 @@ class Set {
                     ne[j] = set[i];
                     j += 1;
                 }
-            } return ne;
+            }
+            return ne;
         }
     }
     /**
@@ -122,7 +123,7 @@ class Set {
      */
     public int[] headSet(final int item) {
         int[] gre = new int[indexOf(item)];
-        int r = 0;;
+        int r = 0;
         for (int l = 0; l < size; l++) {
             if (set[l] < item) {
                 gre[r] = set[l];
@@ -161,14 +162,14 @@ class Set {
         if (size == 0) {
             array = "{}";
         }
-        System.out.println(array);;
+        System.out.println(array);
     }
     /**
      * prints the string representation.
      * @param      item  The item
      * @param      siz   The siz
      */
-    public void String(int[] item, int siz) {
+    public void String(final int[] item, final int siz) {
         int i;
         String array = "{";
         for (i = 0; i < siz - 1; i++) {
@@ -182,16 +183,16 @@ class Set {
     }
     /**
      * sorting of the array.
-     * @param      set   is the input array.
+     * @param      set1   is the input array.
      */
-    public void sort(final int[] set) {
+    public void sort(final int[] set1) {
         int temp;
         for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j < size; j++) {
-                if (set[i] > set[j]) {
-                    temp = set[i];
-                    set[i] = set[j];
-                    set[j] = temp;
+                if (set1[i] > set1[j]) {
+                    temp = set1[i];
+                    set1[i] = set1[j];
+                    set1[j] = temp;
                 }
             }
         }
@@ -201,6 +202,12 @@ class Set {
  * Class for solution.
  */
 public class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	Solution() {
+		//not using.
+	}
      /**
      * helper function to convert string input to int array.
      *
@@ -238,7 +245,9 @@ public class Solution {
                 break;
             case "subSet":
                 String[] token = tokens[1].split(",");
-                int[] temp = s.subSet(Integer.parseInt(token[0]), Integer.parseInt(token[1]));
+                int[] temp = s.subSet(Integer.
+                	parseInt(token[0]), Integer.
+                	parseInt(token[1]));
                 if (temp == null) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 } else if (s.size() == 0) {
