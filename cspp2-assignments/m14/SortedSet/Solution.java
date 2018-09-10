@@ -170,7 +170,7 @@ class Set {
      * @param      item  The item
      * @param      siz   The siz
      */
-    public void String(final int[] item, final int siz) {
+    public void toString(final int[] item, final int siz) {
         int i;
         String array = "{";
         for (i = 0; i < siz - 1; i++) {
@@ -254,7 +254,7 @@ public final class Solution {
                 } else if (s.size() == 0) {
                     System.out.println("{}");
                 } else {
-                    s.String(temp, temp.length);
+                    s.toString(temp, temp.length);
                 }
                 break;
             case "headSet":
@@ -262,7 +262,7 @@ public final class Solution {
                 if (temp1.length == 0) {
                     System.out.println("{}");
                 } else {
-                    s.String(temp1, temp1.length);
+                    s.toString(temp1, temp1.length);
                 }
                 break;
             case "last":
