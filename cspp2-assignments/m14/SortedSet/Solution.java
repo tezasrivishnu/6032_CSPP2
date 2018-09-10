@@ -153,7 +153,7 @@ class Set {
     /**
      * prints the string representation.
      */
-    public void String() {
+    public void sString() {
         int i;
         String array = "{";
         for (i = 0; i < size - 1; i++) {
@@ -270,7 +270,7 @@ public final class Solution {
                 System.out.println(we);
                 break;
             case "print":
-                s.String();
+                s.sString();
                 break;
             default:
                 break;
