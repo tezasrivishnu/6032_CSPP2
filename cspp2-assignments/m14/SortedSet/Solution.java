@@ -179,7 +179,7 @@ class Set {
         if (siz == 0) {
             array = "{}";
         }
-        System.out.println(array);;
+        System.out.println(array);
     }
     /**
      * sorting of the array.
@@ -202,12 +202,12 @@ class Set {
  * Class for solution.
  */
 public class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	Solution() {
-		//not using.
-	}
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //not using.
+    }
      /**
      * helper function to convert string input to int array.
      *
@@ -246,8 +246,8 @@ public class Solution {
             case "subSet":
                 String[] token = tokens[1].split(",");
                 int[] temp = s.subSet(Integer.
-                	parseInt(token[0]), Integer.
-                	parseInt(token[1]));
+                    parseInt(token[0]), Integer.
+                    parseInt(token[1]));
                 if (temp == null) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 } else if (s.size() == 0) {
