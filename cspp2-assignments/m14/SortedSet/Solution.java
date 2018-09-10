@@ -139,7 +139,8 @@ class Set {
     public int last() {
         int num = 0;
         if (size == 0) {
-            return num;
+            System.out.println("Set Empty Exception");
+            return -1;
         } else {
             for (int k = 0; k < size; k++) {
                 if (set[k] > num) {
@@ -208,13 +209,13 @@ public final class Solution {
     private Solution() {
         //not using.
     }
-     /**
-     * helper function to convert string input to int array.
-     *
-     * @param      s     { string input from test case file }
-     *
-     * @return     { int array from the given string }
-     */
+    /**
+    * helper function to convert string input to int array.
+    *
+    * @param      s     { string input from test case file }
+    *
+    * @return     { int array from the given string }
+    */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -246,8 +247,8 @@ public final class Solution {
             case "subSet":
                 String[] token = tokens[1].split(",");
                 int[] temp = s.subSet(Integer.
-                    parseInt(token[0]), Integer.
-                    parseInt(token[1]));
+                                      parseInt(token[0]), Integer.
+                                      parseInt(token[1]));
                 if (temp == null) {
                     System.out.println("Invalid Arguments to Subset Exception");
                 } else if (s.size() == 0) {
@@ -266,11 +267,7 @@ public final class Solution {
                 break;
             case "last":
                 int we = s.last();
-                if (we == 0) {
-                    System.out.println("Set Empty Exception");
-                } else {
-                    System.out.println(we);
-                }
+                System.out.println(we);
                 break;
             case "print":
                 s.String();
