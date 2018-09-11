@@ -122,7 +122,7 @@ class Set {
      * @return     the array.
      */
     public int[] headSet(final int item) throws Exception {
-        if (size == 0) {
+        if (size == 0 || item<set[0]) {
             throw new Exception("Set Empty Exception");
         }
         int[] gre = new int[indexOf(item)];
