@@ -81,23 +81,23 @@ class Set {
      * @param      b     is the input parameter.
      * @return     array of subset.
      */
-    public int[] subSet(final int a, final int b) {
+    public int[] subSet(final int a, final int b) throws Exception {
         int[] ne = new int[Math.abs(indexOf(b) - indexOf(a))];
-        if (a > b) {
-            return null;
-        } else {
-            if (size == 0) {
-                return ne;
-            } else {
-                int j = 0;
-                for (int i = indexOf(a); i < indexOf(b); i++) {
-                    ne[j] = set[i];
-                    j += 1;
-                }
-            }
-            return ne;
+        if (a > b || size == 0) {
+            throw new Exception("Invalid Arguments to Subset Exception");
         }
+        if (size == 0) {
+            return ne;
+        } else {
+            int j = 0;
+            for (int i = indexOf(a); i < indexOf(b); i++) {
+                ne[j] = set[i];
+                j += 1;
+            }
+        }
+        return ne;
     }
+
     /**
      * Adds all the elements in set.
      * @param      item  Tis the input parameter.
@@ -121,8 +121,8 @@ class Set {
      * @param      item  is the input parameter.
      * @return     the array.
      */
-    public int[] headSet(final int item) throws Exception{
-        if (size==0) {
+    public int[] headSet(final int item) throws Exception {
+        if (size == 0) {
             throw new Exception("Set Empty Exception");
         }
         int[] gre = new int[indexOf(item)];
@@ -248,26 +248,28 @@ public final class Solution {
                 s.addAll(intArray);
                 break;
             case "subSet":
-                String[] token = tokens[1].split(",");
-                int[] temp = s.subSet(Integer.
-                                      parseInt(token[0]), Integer.
-                                      parseInt(token[1]));
-                if (temp == null) {
-                    System.out.println("Invalid Arguments to Subset Exception");
-                } else if (s.size() == 0) {
-                    System.out.println("{}");
-                } else {
-                    s.toString(temp, temp.length);
+                try {
+                    String[] token = tokens[1].split(",");
+                    int[] temp = s.subSet(Integer.
+                                          parseInt(token[0]), Integer.
+                                          parseInt(token[1]));
+                    if (s.size() == 0) {
+                        System.out.println("{}");
+                    } else {
+                        s.toString(temp, temp.length);
+                    }
+                } catch (Exception mes) {
+                    System.out.println(mes.getMessage());
                 }
                 break;
             case "headSet":
-            try {
-                int[] temp1 = s.headSet(Integer.parseInt(tokens[1]));
-                // if (temp1.length == 0) {
-                //     System.out.println("{}");
-                // } else {
+                try {
+                    int[] temp1 = s.headSet(Integer.parseInt(tokens[1]));
+                    // if (temp1.length == 0) {
+                    //     System.out.println("{}");
+                    // } else {
                     s.toString(temp1, temp1.length);
-                } catch(Exception mes){
+                } catch (Exception mes) {
                     System.out.println(mes.getMessage());
                 }
                 break;
