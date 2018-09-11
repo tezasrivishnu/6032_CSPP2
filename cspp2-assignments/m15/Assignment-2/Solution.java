@@ -1,13 +1,19 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
-    InvalidSubsetSelectionException(String s) {
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
+/**
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
-    SetEmptyException(String s) {
+    SetEmptyException(final String s) {
         super(s);
     }
 }
@@ -90,11 +96,14 @@ class Set {
      * @param      a     is the input parameter.
      * @param      b     is the input parameter.
      * @return     array of subset.
+     * @throws InvalidSubsetSelectionException error.
      */
-    public int[] subSet(final int a, final int b) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int a, final int b) throws
+     InvalidSubsetSelectionException {
         int[] ne = new int[Math.abs(indexOf(b) - indexOf(a))];
         if (a > b) {
-            throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException(
+                "Invalid Arguments to Subset Exception");
         }
         if (size == 0) {
             return ne;
@@ -130,6 +139,7 @@ class Set {
      * returns set till the element given.
      * @param      item  is the input parameter.
      * @return     the array.
+     * @throws SetEmptyException error.
      */
     public int[] headSet(final int item) throws SetEmptyException {
         if (size == 0 || item <= set[0]) {
@@ -148,6 +158,7 @@ class Set {
     /**
      * highest element in array.
      * @return     int value.
+     * @throws SetEmptyException error.
      */
     public int last() throws SetEmptyException {
         int num = 0;
