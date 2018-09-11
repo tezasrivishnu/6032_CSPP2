@@ -234,6 +234,20 @@ public class Solution {
     public void clear() {
         size = 0;
     }
+    /**
+     * count the elements in array.
+     * @param      item  is the input parameter.
+     * @return     the count of a element.
+     */
+    public int count(final int item) {
+        // write the logic
+        int count = 0;
+        for (int j = 0; j < size; j++) {
+            if (list[j] == item) {
+                count += 1;
+            }
+        } return count;
+    }
 
     /**
      * main method to drive program.
@@ -311,6 +325,9 @@ public class Solution {
                 } catch(Exception mes){
                     System.out.println(mes.getMessage());
                 }
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "subList":
                 try {
