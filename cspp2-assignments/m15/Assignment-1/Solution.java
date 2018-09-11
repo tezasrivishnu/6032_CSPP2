@@ -109,7 +109,7 @@ public class Solution {
         return indexOf(item) != -1;
     }
     /**
-     * Returns the index of the first occurrence of the specified element in
+     * Returns the index of the first occurrence of the specified element in.
      * @param      item  is the input parameter.
      * @return     the index value.
      */
