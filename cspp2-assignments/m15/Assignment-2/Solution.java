@@ -1,6 +1,16 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+class InvalidSubsetSelectionException extends Exception {
+    InvalidSubsetSelectionException(String s) {
+        super(s);
+    }
+}
+class SetEmptyException extends Exception {
+    SetEmptyException(String s) {
+        super(s);
+    }
+}
 /**
  * Class for set.
  */
@@ -81,10 +91,10 @@ class Set {
      * @param      b     is the input parameter.
      * @return     array of subset.
      */
-    public int[] subSet(final int a, final int b) throws Exception {
+    public int[] subSet(final int a, final int b) throws InvalidSubsetSelectionException {
         int[] ne = new int[Math.abs(indexOf(b) - indexOf(a))];
         if (a > b) {
-            throw new Exception("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
         }
         if (size == 0) {
             return ne;
@@ -121,9 +131,9 @@ class Set {
      * @param      item  is the input parameter.
      * @return     the array.
      */
-    public int[] headSet(final int item) throws Exception {
-        if (size == 0 || item<=set[0]) {
-            throw new Exception("Set Empty Exception");
+    public int[] headSet(final int item) throws SetEmptyException {
+        if (size == 0 || item <= set[0]) {
+            throw new SetEmptyException("Set Empty Exception");
         }
         int[] gre = new int[indexOf(item)];
         int r = 0;
@@ -139,10 +149,10 @@ class Set {
      * highest element in array.
      * @return     int value.
      */
-    public int last() throws Exception {
+    public int last() throws SetEmptyException {
         int num = 0;
         if (size == 0) {
-            throw new Exception("Set Empty Exception");
+            throw new SetEmptyException("Set Empty Exception");
             //return -1;
         } else {
             for (int k = 0; k < size; k++) {
@@ -272,6 +282,7 @@ class Set {
         }
     }
 }
+
 /**
  * Class for solution.
  */
@@ -328,7 +339,7 @@ public final class Solution {
                     } else {
                         s.toString(temp, temp.length);
                     }
-                } catch (Exception mes) {
+                } catch (InvalidSubsetSelectionException mes) {
                     System.out.println(mes.getMessage());
                 }
                 break;
@@ -339,7 +350,7 @@ public final class Solution {
                     //     System.out.println("{}");
                     // } else {
                     s.toString(temp1, temp1.length);
-                } catch (Exception mes) {
+                } catch (SetEmptyException mes) {
                     System.out.println(mes.getMessage());
                 }
                 break;
@@ -347,7 +358,7 @@ public final class Solution {
                 try {
                     int we = s.last();
                     System.out.println(we);
-                } catch (Exception mes) {
+                } catch (SetEmptyException mes) {
                     System.out.println(mes.getMessage());
                 }
                 break;
