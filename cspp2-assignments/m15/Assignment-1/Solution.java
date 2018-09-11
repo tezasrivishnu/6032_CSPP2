@@ -133,7 +133,7 @@ public class Solution {
     /**
      Removes all of its elements that are contained in the specified int array.
      @param      newArray  is the array to remove the elements.
-     @throws Exception Invalid Position. 
+     @throws Exception Invalid Position.
     */
     public void removeAll(final int[] newArray) throws Exception {
         for (int i = 0; i < newArray.length; i++) {
