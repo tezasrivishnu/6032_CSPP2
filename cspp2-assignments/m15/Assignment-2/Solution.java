@@ -83,7 +83,7 @@ class Set {
      */
     public int[] subSet(final int a, final int b) throws Exception {
         int[] ne = new int[Math.abs(indexOf(b) - indexOf(a))];
-        if (a > b || size == 0) {
+        if (a > b) {
             throw new Exception("Invalid Arguments to Subset Exception");
         }
         if (size == 0) {
