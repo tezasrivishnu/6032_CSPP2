@@ -5,6 +5,10 @@ import java.util.Arrays;
  * Exception for signaling invalid subset selection errors.
  */
 class InvalidSubsetSelectionException extends Exception {
+    /**
+     * Constructs the object.
+     * @param      s     is the input parameter.
+     */
     InvalidSubsetSelectionException(final String s) {
         super(s);
     }
@@ -13,6 +17,10 @@ class InvalidSubsetSelectionException extends Exception {
  * Exception for signaling set empty errors.
  */
 class SetEmptyException extends Exception {
+    /**
+     * Constructs the object.
+     * @param      s     is the input parameter.
+     */
     SetEmptyException(final String s) {
         super(s);
     }
