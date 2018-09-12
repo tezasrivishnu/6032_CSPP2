@@ -67,8 +67,7 @@ class BookYourShow {
 	}
 	public void sResize() {
 		show = Arrays.copyOf(show, scount + 2);
-	} 
-	public void pResize() {
+	} public void pResize() {
 		patron = Arrays.copyOf(patron, pcount + 2);
 	}
 	public Show getAShow(String movie, String datetime) {
@@ -85,14 +84,12 @@ class BookYourShow {
 	// }
 	public void printTicket(String movie, String datetime, String phone) {
 		Show print = getAShow(movie, datetime);
-		//System.out.println(print != null);
 		if (print != null) {
-			// System.out.println(pcount);
-			for (int i = 0; i < scount; i++) {
-				//System.out.println(phone.equals(patron[i].getPhone()));
+			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
-					System.out.println(phone +" "+ movie +" "+ datetime);
-					break;
+					System.out.println(movie + "," + datetime + "," + phone);
+				} else {
+					System.out.println("Invalid");
 				}
 			}
 		} else {
@@ -101,7 +98,6 @@ class BookYourShow {
 	}
 	public void bookAShow(String movie, String datetime, Patron patron) {
 		Show available = getAShow(movie, datetime);
-		addAPatron(patron);
 		int a = 0;
 		if (available != null) {
 			for (int i = 0; i < patron.getSeats().length; i++) {
@@ -118,6 +114,8 @@ class BookYourShow {
 						}
 					}
 				}
+			}  else {
+				System.out.println("Not Available");
 			}
 		} else {
 			System.out.println("No Show");
@@ -170,8 +168,7 @@ public final class Solution {
 			case "get":
 				Show show = bys.getAShow(check[1], tokens[1]);
 				if (show != null) {
-					System.out.println(show.getMovie()
-						+","+show.getDatetime());
+					System.out.println(show);
 				} else {
 					System.out.println("No show");
 				}
