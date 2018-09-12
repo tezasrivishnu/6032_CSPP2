@@ -98,6 +98,7 @@ class BookYourShow {
 	}
 	public void bookAShow(String movie, String datetime, Patron patron) {
 		Show available = getAShow(movie, datetime);
+		addAPatron(patron);
 		int a = 0;
 		if (available != null) {
 			for (int i = 0; i < patron.getSeats().length; i++) {
