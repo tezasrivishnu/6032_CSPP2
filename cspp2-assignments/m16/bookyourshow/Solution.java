@@ -76,7 +76,7 @@ class BookYourShow {
 			if ((movie.equals(show[i].getMovie())) &&
 			        (datetime.equals(show[i].getDatetime()))) {
 				return show[i];
-			}
+			} 
 		}
 		return null;
 	}
@@ -172,7 +172,7 @@ public final class Solution {
 				if (show != null) {
 					System.out.println(show);
 				} else {
-					System.out.println("No show");
+					System.out.println("Invalid");
 				}
 				break;
 
