@@ -20,9 +20,9 @@ class Show {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      movie     The movie
-	 * @param      datetime  The datetime
-	 * @param      seats     The seats
+	 * @param      movi     The movie
+	 * @param      datetime The datetime
+	 * @param      seat     The seats
 	 */
 	Show(final String movi, final String datetim, final String[] seat) {
 		this.movie = movi;
@@ -95,9 +95,9 @@ class Patron {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      customer  The customer
-	 * @param      phone     The phone
-	 * @param      book      The book
+	 * @param      custome The customer
+	 * @param      phon     The phone
+	 * @param      boo      The book
 	 */
 	Patron(final String custome, final String phon, final String[] boo) {
 		this.customer = custome;
@@ -226,8 +226,8 @@ class BookYourShow {
 		if (print != null) {
 			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
-					System.out.println(phone +
-						" " + movie + " " + datetime);
+					System.out.println(phone
+						+ " " + movie + " " + datetime);
 					a += 1;
 					return;
 				}
@@ -245,7 +245,7 @@ class BookYourShow {
 	 *
 	 * @param      movie     is the input parameter.
 	 * @param      datetime  is the input parameter.
-	 * @param      patron    is the input parameter.
+	 * @param      patro    is the input parameter.
 	 */
 	public void bookAShow(final String movie,
 		final String datetime, final Patron patro) {
@@ -256,7 +256,8 @@ class BookYourShow {
 				for (int j = 0; j < available.
 					getSeats().length; j++) {
 					if ((patro.getSeats()[i]).
-						equals(available.getSeats()[j])) {
+						equals(available.
+							getSeats()[j])) {
 						available.getSeats()[j] = "N/A";
 					}
 				}
@@ -266,9 +267,12 @@ class BookYourShow {
 			// 	getSeats().length; i++) {
 			// 		for (int j = 0; j < available.
 			// 		getSeats().length; j++) {
-			// 			if ((patron.getSeats()[i]).equals
-			// 			(available.getSeats()[j])) {
-			// 				available.getSeats()[j] = "N/A";
+			// 			if ((patron.getSeats()[i])
+			// 			.equals
+			// 			(available.getSeats()[j]))
+			// 			{
+			// 				available.getSeats()[j]
+			// 				= "N/A";
 			// 				//System.out.println
 			// 				(available.getSeats()[j]);
 			// 			}
