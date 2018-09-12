@@ -6,6 +6,10 @@ import java.util.Scanner;
  */
 class Show {
 	/**
+	 * initializing value of ten.
+	 */
+	private static final int TEN = 10;
+	/**
 	 * initializing movie.
 	 */
 	private String movie;
@@ -21,7 +25,7 @@ class Show {
 	 * Constructs the object.
 	 *
 	 * @param      movi     The movie
-	 * @param      datetime The datetime
+	 * @param      datetim The datetime
 	 * @param      seat     The seats
 	 */
 	Show(final String movi, final String datetim, final String[] seat) {
@@ -146,7 +150,7 @@ class BookYourShow {
 	 */
 	private int scount;
 	/**
-	 * 
+	 *
 	 * initializing the patron size.
 	 */
 	private int pcount;
@@ -274,7 +278,8 @@ class BookYourShow {
 			// 				available.getSeats()[j]
 			// 				= "N/A";
 			// 				//System.out.println
-			// 				(available.getSeats()[j]);
+			// 				(available.
+			// 				getSeats()[j]);
 			// 			}
 			// 		}
 			// 	}
