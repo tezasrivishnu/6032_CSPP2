@@ -5,8 +5,17 @@ import java.util.Scanner;
  * @author tezasrivishnu.
  */
 class Show {
+	/**
+	 * initializing movie.
+	 */
 	private String movie;
+	/**
+	 * initializing datetime.
+	 */
 	private String datetime;
+	/**
+	 * initializing array seats.
+	 */
 	private String[] seats;
 	/**
 	 * Constructs the object.
@@ -15,10 +24,10 @@ class Show {
 	 * @param      datetime  The datetime
 	 * @param      seats     The seats
 	 */
-	Show(final String movie, final String datetime, final String[] seats) {
-		this.movie = movie;
-		this.datetime = datetime;
-		this.seats = seats;
+	Show(final String movi, final String datetim, final String[] seat) {
+		this.movie = movi;
+		this.datetime = datetim;
+		this.seats = seat;
 	}
 	/**
 	 * Gets the movie.
@@ -71,8 +80,17 @@ class Show {
  * Class for patron.
  */
 class Patron {
+	/**
+	 * initializing customer.
+	 */
 	private String customer;
+	/**
+	 * initializing phone.
+	 */
 	private String phone;
+	/**
+	 * initializing array book.
+	 */
 	private String[] book;
 	/**
 	 * Constructs the object.
@@ -81,10 +99,10 @@ class Patron {
 	 * @param      phone     The phone
 	 * @param      book      The book
 	 */
-	Patron(final String customer, final String phone, final String[] book) {
-		this.customer = customer;
-		this.phone = phone;
-		this.book = book;
+	Patron(final String custome, final String phon, final String[] boo) {
+		this.customer = custome;
+		this.phone = phon;
+		this.book = boo;
 	}
 	/**
 	 * Gets the customer name.
@@ -101,7 +119,7 @@ class Patron {
 	 */
 	public String getPhone() {
 		return phone;
-	} 
+	}
 	/**
 	 * Gets the seats.
 	 *
@@ -115,9 +133,22 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+	/**
+	 * initializing the show array.
+	 */
 	private Show[] show;
+	/**
+	 * initializing the patron array.
+	 */
 	private Patron[] patron;
+	/**
+	 * initializing the show size.
+	 */
 	private int scount;
+	/**
+	 * 
+	 * initializing the patron size.
+	 */
 	private int pcount;
 	/**
 	 * Constructs the object.
@@ -143,6 +174,7 @@ class BookYourShow {
 	}
 	/**
 	 * adding a patron.
+	 * @param movie is the input parameter.
 	 */
 	public void addAPatron(final Patron movie) {
 		if (pcount == patron.length) {
@@ -173,8 +205,8 @@ class BookYourShow {
 	 */
 	public Show getAShow(final String movie, final String datetime) {
 		for (int i = 0; i < scount; i++) {
-			if ((movie.equals(show[i].getMovie())) &&
-			        (datetime.equals(show[i].getDatetime()))) {
+			if ((movie.equals(show[i].getMovie()))
+				&& (datetime.equals(show[i].getDatetime()))) {
 				return show[i];
 			}
 		}
@@ -187,13 +219,15 @@ class BookYourShow {
 	 * @param      datetime  is the input parameter.
 	 * @param      phone    is the input parameter.
 	 */
-	public void printTicket(final String movie, final String datetime, final String phone) {
+	public void printTicket(final String movie,
+		final String datetime, final String phone) {
 		Show print = getAShow(movie, datetime);
 		int a = 0;
 		if (print != null) {
 			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
-					System.out.println(phone + " " + movie + " " + datetime);
+					System.out.println(phone +
+						" " + movie + " " + datetime);
 					a += 1;
 					return;
 				}
@@ -213,23 +247,30 @@ class BookYourShow {
 	 * @param      datetime  is the input parameter.
 	 * @param      patron    is the input parameter.
 	 */
-	public void bookAShow(final String movie, final String datetime, final Patron patron) {
+	public void bookAShow(final String movie,
+		final String datetime, final Patron patro) {
 		Show available = getAShow(movie, datetime);
-		addAPatron(patron);
+		addAPatron(patro);
 		if (available != null) {
-			for (int i = 0; i < patron.getSeats().length; i++) {
-				for (int j = 0; j < available.getSeats().length; j++) {
-					if ((patron.getSeats()[i]).equals(available.getSeats()[j])) {
+			for (int i = 0; i < patro.getSeats().length; i++) {
+				for (int j = 0; j < available.
+					getSeats().length; j++) {
+					if ((patro.getSeats()[i]).
+						equals(available.getSeats()[j])) {
 						available.getSeats()[j] = "N/A";
 					}
 				}
 			}
 			// if (a == patron.getSeats().length) {
-			// 	for (int i = 0; i < patron.getSeats().length; i++) {
-			// 		for (int j = 0; j < available.getSeats().length; j++) {
-			// 			if ((patron.getSeats()[i]).equals(available.getSeats()[j])) {
+			// 	for (int i = 0; i < patron.
+			// 	getSeats().length; i++) {
+			// 		for (int j = 0; j < available.
+			// 		getSeats().length; j++) {
+			// 			if ((patron.getSeats()[i]).equals
+			// 			(available.getSeats()[j])) {
 			// 				available.getSeats()[j] = "N/A";
-			// 				//System.out.println(available.getSeats()[j]);
+			// 				//System.out.println
+			// 				(available.getSeats()[j]);
 			// 			}
 			// 		}
 			// 	}
@@ -297,7 +338,7 @@ public final class Solution {
 				Show show = bys.getAShow(check[1], tokens[1]);
 				if (show != null) {
 					System.out.println(show.
-					                   printExceptTickets());
+					        printExceptTickets());
 				} else {
 					System.out.println("No show");
 				}
