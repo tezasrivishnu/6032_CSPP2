@@ -88,8 +88,6 @@ class BookYourShow {
 			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
 					System.out.println(movie + "," + datetime + "," + phone);
-				} else {
-					System.out.println("Invalid");
 				}
 			}
 		} else {
@@ -115,8 +113,6 @@ class BookYourShow {
 						}
 					}
 				}
-			}  else {
-				System.out.println("Not Available");
 			}
 		} else {
 			System.out.println("No Show");
