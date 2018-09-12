@@ -93,7 +93,7 @@ class BookYourShow {
 		if (print != null) {
 			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
-					System.out.println(phone + movie + datetime);
+					System.out.println(phone + " " + movie + " " + datetime);
 				}
 			}
 		} else {
