@@ -76,7 +76,7 @@ class BookYourShow {
 			if ((movie.equals(show[i].getMovie())) &&
 			        (datetime.equals(show[i].getDatetime()))) {
 				return show[i];
-			} 
+			}
 		}
 		return null;
 	}
@@ -88,7 +88,7 @@ class BookYourShow {
 		//System.out.println(print != null);
 		if (print != null) {
 			// System.out.println(pcount);
-			for (int i = 0; i < pcount; i++) {
+			for (int i = 0; i < scount; i++) {
 				//System.out.println(phone.equals(patron[i].getPhone()));
 				if (phone.equals(patron[i].getPhone())) {
 					System.out.println(phone +" "+ movie +" "+ datetime);
@@ -170,9 +170,10 @@ public final class Solution {
 			case "get":
 				Show show = bys.getAShow(check[1], tokens[1]);
 				if (show != null) {
-					System.out.println(show);
+					System.out.println(show.getMovie()
+						+","+show.getDatetime());
 				} else {
-					System.out.println("Invalid");
+					System.out.println("No show");
 				}
 				break;
 
