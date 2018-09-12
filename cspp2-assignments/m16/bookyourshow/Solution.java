@@ -94,10 +94,11 @@ class BookYourShow {
 			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
 					System.out.println(phone + " " + movie + " " + datetime);
+					return;
 				}
 			}
 		} else {
-			System.out.println("No Show");
+			System.out.println("Invalid");
 		}
 	}
 	public void bookAShow(String movie, String datetime, Patron patron) {
