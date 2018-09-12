@@ -18,6 +18,11 @@ class Show {
 	public String[] getSeats() {
 		return seats;
 	}
+	public String printExceptTickets() {
+		String s = "";
+		s += movie + "," + datetime;
+		return s;
+	}
 	public String toString() {
 		String s = "";
 		s += movie + "," + datetime + ","
@@ -175,7 +180,7 @@ public final class Solution {
 			case "get":
 				Show show = bys.getAShow(check[1], tokens[1]);
 				if (show != null) {
-					System.out.println(show);
+					System.out.println(show.printExceptTickets());
 				} else {
 					System.out.println("No show");
 				}
