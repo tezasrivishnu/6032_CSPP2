@@ -18,6 +18,12 @@ class Show {
 	public String[] getSeats() {
 		return seats;
 	}
+	public String toString() {
+		String s = "";
+		s += movie + "," + datetime + ","
+		     + Arrays.toString(seats).replace(", ", ",");
+		return s;
+	}
 
 }
 class Patron {
@@ -87,7 +93,7 @@ class BookYourShow {
 		if (print != null) {
 			for (int i = 0; i < pcount; i++) {
 				if (phone.equals(patron[i].getPhone())) {
-					System.out.println(movie + "," + datetime + "," + phone);
+					System.out.println(phone + movie + datetime);
 				}
 			}
 		} else {
@@ -119,7 +125,9 @@ class BookYourShow {
 		}
 	}
 	public void showAll() {
-		System.out.println("");
+		for (int i = 0; i < scount; i++) {
+			System.out.println(show[i]);
+		}
 	}
 }
 public final class Solution {
