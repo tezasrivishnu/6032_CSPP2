@@ -104,23 +104,24 @@ class BookYourShow {
 	public void bookAShow(String movie, String datetime, Patron patron) {
 		Show available = getAShow(movie, datetime);
 		addAPatron(patron);
-		int a = 0;
 		if (available != null) {
 			for (int i = 0; i < patron.getSeats().length; i++) {
 				for (int j = 0; j < available.getSeats().length; j++) {
 					if ((patron.getSeats()[i]).equals(available.getSeats()[j])) {
-						a += 1;
+						available.getSeats()[j] = "N/A";
 					}
 				}
-			} if (a == patron.getSeats().length) {
-				for (int i = 0; i < patron.getSeats().length; i++) {
-					for (int j = 0; j < available.getSeats().length; j++) {
-						if ((patron.getSeats()[i]).equals(available.getSeats()[j])) {
-							available.getSeats()[j] = "N/A";
-						}
-					}
-				}
-			}
+			} 
+			// if (a == patron.getSeats().length) {
+			// 	for (int i = 0; i < patron.getSeats().length; i++) {
+			// 		for (int j = 0; j < available.getSeats().length; j++) {
+			// 			if ((patron.getSeats()[i]).equals(available.getSeats()[j])) {
+			// 				available.getSeats()[j] = "N/A";
+			// 				//System.out.println(available.getSeats()[j]);
+			// 			}
+			// 		}
+			// 	}
+			// }
 		} else {
 			System.out.println("No Show");
 		}
