@@ -128,10 +128,13 @@ class ShoppingCart {
 		return total;
 	}
 	public void applyCoupon(String coupan) {
+		//System.out.println(coupans.length);
 		for (int i = 0; i < coupans.length ; i++) {
+			//System.out.println(coupan.equals(coupans[i]) && !available);
 			if (coupan.equals(coupans[i]) && !available) {
 				available = true;
-				disc = Character.getNumericValue(coupans[i].charAt(3)) / 10;
+				disc = Character.getNumericValue(coupan.charAt(3)) / 10.0;
+				//System.out.println(disc);
 			}
 		}
 	}
@@ -182,7 +185,7 @@ public class Solution {
 			case "catalog":
 				ne.showCatalog();
 				break;
-			case "coupan":
+			case "coupon":
 				ne.applyCoupon(tokens[1]);
 				break;
 			case "print":
