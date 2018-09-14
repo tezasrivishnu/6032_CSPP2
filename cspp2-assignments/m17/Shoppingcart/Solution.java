@@ -85,16 +85,18 @@ class ShoppingCart {
 		if (car == cart.length) {
 			itemResize();
 		}
-		for (int i = 0; i < cat; i++) {
-			if ((item.getName().equals(catalog[i].getName())) &&
-			        (item.getQuantity() <= catalog[i].getQuantity())) {
-				cart[car] = item;
-				car += 1;
-			}else {
-				int index = carIndexOf(item.getName());
-				int quant = cart[index].getQuantity()+item.getQuantity();
-				cart[index].setQuantity(quant);
+		int index = carIndexOf(item.getName());
+		if (index == -1) {
+			for (int i = 0; i < cat; i++) {
+				if ((item.getName().equals(catalog[i].getName())) &&
+				        (item.getQuantity() <= catalog[i].getQuantity())) {
+					cart[car] = item;
+					car += 1;
+				}
 			}
+		} else {
+			int quant = cart[index].getQuantity() + item.getQuantity();
+			cart[index].setQuantity(quant);
 		}
 	}
 	public void cartResize() {
