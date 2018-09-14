@@ -71,7 +71,7 @@ class Item {
      *
      * @return     { description_of_the_return_value }
      */
-    public int setQuantity(int quant) {
+    public int setQuantity(final int quant) {
         return this.quantity = quant;
     }
     /**
@@ -89,6 +89,23 @@ class Item {
  * Class for shopping cartesian.
  */
 class ShoppingCart {
+    /**
+     * assigning value of 10.
+     */
+    private static final int TEN = 10;
+    /**
+     * assigning value of 3.
+     */
+    private static final int THREE = 3;
+    /**
+     * assigning value of 10.0.
+     */
+    private static final double TEND = 10.0;
+    /**
+     * assigning value of tax.
+     */
+    private static final double TAX = 0.15;
+
     /**
      * initializing catalog array.
      */
@@ -129,8 +146,8 @@ class ShoppingCart {
      * Constructs the object.
      */
     ShoppingCart() {
-        catalog = new Item[10];
-        cart = new Item[10];
+        catalog = new Item[TEN];
+        cart = new Item[TEN];
         car = 0;
         cat = 0;
 
@@ -202,15 +219,15 @@ class ShoppingCart {
             for (int i = 0; i < cat; i++) {
                 if ((item.getName().equals(catalog[i].
                     getName()))
-                        && (item.getQuantity() <=
-                            catalog[i].getQuantity())) {
+                        && (item.getQuantity()
+                            <= catalog[i].getQuantity())) {
                     cart[car] = item;
                     car += 1;
                 }
             }
         } else {
-            int quant = cart[index].getQuantity() +
-            item.getQuantity();
+            int quant = cart[index].getQuantity()
+            + item.getQuantity();
 
             cart[index].setQuantity(quant);
         }
@@ -220,8 +237,7 @@ class ShoppingCart {
      */
     public void cartResize() {
         cart = Arrays.copyOf(cart, car + 2);
-
-    } 
+    }
     /**
      * rezizing the catalog array.
      */
@@ -287,7 +303,7 @@ class ShoppingCart {
         double total = getTotalAmount();
         discamount = total * (disc);
         total -= discamount;
-        tax = total * 0.15;
+        tax = total * TAX;
         total += tax;
         return total;
     }
@@ -303,7 +319,7 @@ class ShoppingCart {
             if (coupan.equals(coupans[i]) && !available) {
                 available = true;
                 disc = Character.
-                       getNumericValue(coupan.charAt(3)) / 10.0;
+                       getNumericValue(coupan.charAt(THREE)) / TEND;
                 //System.out.println(disc);
             }
         } if (!available) {
@@ -318,8 +334,8 @@ class ShoppingCart {
         System.out.println("Name   quantity   Price");
         for (int i = 0; i < car; i++) {
             sum = catalog[indexOf(cart[i].getName())].getPrice();
-            System.out.println(cart[i].getName() + " " +
-                               cart[i].getQuantity() + " " + sum);
+            System.out.println(cart[i].getName() + " "
+                              + cart[i].getQuantity() + " " + sum);
         }
         System.out.println("Total:" + getTotalAmount());
         System.out.println("Disc%:" + discamount);
@@ -330,7 +346,7 @@ class ShoppingCart {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
