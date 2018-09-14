@@ -154,9 +154,9 @@ class ShoppingCart {
 				available = true;
 				disc = Character.getNumericValue(coupan.charAt(3)) / 10.0;
 				//System.out.println(disc);
-			} else {
-				System.out.println("Inavlid Coupon");
-			}
+			} 
+		} if(available == false) {
+			System.out.println("Inavlid Coupon");
 		}
 	}
 	public void printInvoice() {
