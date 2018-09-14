@@ -64,15 +64,14 @@ class Item {
         return this.price;
     }
 
+
     /**
      * Sets the quantity.
      *
      * @param      quant  The quant
-     *
-     * @return     { description_of_the_return_value }
      */
-    public int setQuantity(final int quant) {
-        return this.quantity = quant;
+    public void setQuantity(final int quant) {
+        this.quantity = quant;
     }
     /**
      * Returns a string representation of the object.
@@ -211,7 +210,7 @@ class ShoppingCart {
      * @param      item  The item.
      */
     public void addToCart(final Item item) {
-        if (car == cart.length) {
+        if (car >= cart.length) {
             itemResize();
         }
         int index = carIndexOf(item.getName());
