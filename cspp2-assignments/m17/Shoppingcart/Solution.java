@@ -121,10 +121,10 @@ class ShoppingCart {
 	}
 	public double getPayableAmount() {
 		double total = getTotalAmount();
-		tax = total * 0.15;
-		total += tax;
 		discamount = total * (disc);
 		total -= discamount;
+		tax = total * 0.15;
+		total += tax;
 		return total;
 	}
 	public void applyCoupon(String coupan) {
