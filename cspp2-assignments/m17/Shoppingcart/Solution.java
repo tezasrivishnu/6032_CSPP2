@@ -73,16 +73,15 @@ class ShoppingCart {
 		}
 		return -1;
 	}
-	// public int carIndexOf(final String item) {
-	// 	for (int i = 0; i < car; i++) {
-	// 		if (item.equals(cart[i].getName())) {
-	// 			return i;
-	// 		}
-	// 	}
-	// 	return -1;
-	// }
+	public int carIndexOf(final String item) {
+		for (int i = 0; i < car; i++) {
+			if (item.equals(cart[i].getName())) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	public void addToCart(Item item) {
-		int index = 0;
 		if (car == cart.length) {
 			itemResize();
 		}
@@ -91,9 +90,8 @@ class ShoppingCart {
 			        (item.getQuantity() <= catalog[i].getQuantity())) {
 				cart[car] = item;
 				car += 1;
-				index = i;
 			}else {
-				//int index = carIndexOf(item);
+				int index = carIndexOf(item.getName());
 				int quant = cart[index].getQuantity()+item.getQuantity();
 				cart[index].setQuantity(quant);
 			}
