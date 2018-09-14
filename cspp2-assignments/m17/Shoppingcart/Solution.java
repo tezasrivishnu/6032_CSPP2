@@ -156,7 +156,7 @@ class ShoppingCart {
 				//System.out.println(disc);
 			} 
 		} if(available == false) {
-			System.out.println("Inavlid Coupon");
+			System.out.println("Invalid coupon");
 		}
 	}
 	public void printInvoice() {
