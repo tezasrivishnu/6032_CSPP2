@@ -44,7 +44,7 @@ class ShoppingCart {
 	private double tax;
 	private double discamount;
 	private boolean available = false;
-	private String[] coupans = {"IND10", "IND20", "IND30", "IND40", "IND50"};
+	private String[] coupans = {"IND10", "IND20", "IND30", "IND50"};
 	ShoppingCart() {
 		catalog = new Item[10];
 		cart = new Item[10];
@@ -96,6 +96,7 @@ class ShoppingCart {
 			}
 		} else {
 			int quant = cart[index].getQuantity() + item.getQuantity();
+
 			cart[index].setQuantity(quant);
 		}
 	}
@@ -153,6 +154,8 @@ class ShoppingCart {
 				available = true;
 				disc = Character.getNumericValue(coupan.charAt(3)) / 10.0;
 				//System.out.println(disc);
+			} else {
+				System.out.println("Inavlid Coupon");
 			}
 		}
 	}
