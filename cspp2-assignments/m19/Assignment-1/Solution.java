@@ -4,10 +4,22 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
-    static Quiz[] quizarr = new Quiz[4];
-    static int[] array = new int[4];
-    static String[] choices = {"choice 1", "choice 2", "choice 3", "choice 4"};
-    static int size = 0;
+    /**
+     * initilizing Quiz array.
+     */
+    private static Quiz[] quizarr = new Quiz[4];
+    /**
+     * initilizing array.
+     */
+    private static int[] array = new int[4];
+    /**
+     * initilizing choices array.
+     */
+    private static String[] choices = {"choice 1", "choice 2", "choice 3", "choice 4"};
+    /**
+     * initilizing size.
+     */
+    private static int size = 0;
     /**
     * Constructs the object.
     */
@@ -62,7 +74,8 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,
+        final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -77,8 +90,9 @@ public final class Solution {
                 if (items.length != 5) {
                     System.out.println("Error! Malformed question");
                 } else {
-                    
-                    quizarr[size] = new Quiz(items[0], Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4]));
+                    quizarr[size] = new Quiz(items[0], Integer.
+                        parseInt(items[2]), Integer.parseInt(items[3]), Integer.
+                        parseInt(items[4]));
                     size += 1;
                 }
             }
@@ -92,7 +106,8 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s,
+        final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -101,15 +116,17 @@ public final class Solution {
                 String string = s.nextLine();
                 String[] arrays = string.split(" ");
                 array[i] = Integer.parseInt(arrays[1]);
-                System.out.println(quizarr[i].getQuestion() + "(" + quizarr[i].getMarks() + ")");
-                System.out.println(choices[0] + "\t" + choices[1] + "\t" + choices[2] + "\t" + choices[3]);
+                System.out.println(quizarr[i].getQuestion()
+                    + "(" + quizarr[i].getMarks() + ")");
+                System.out.println(choices[0] + "\t" + choices[1]
+                    + "\t" + choices[2] + "\t" + choices[3]);
                 System.out.println();
             }
         }
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
@@ -121,10 +138,12 @@ public final class Solution {
                 System.out.println(quizarr[i].getQuestion());
                 if (array[i] == quizarr[i].getCorrect()) {
                     total += quizarr[i].getMarks();
-                    System.out.println(" Correct Answer! - Marks Awarded: " + quizarr[i].getMarks());
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                        + quizarr[i].getMarks());
                 } else {
                     total += quizarr[i].getPenalty();
-                    System.out.println(" Wrong Answer! - Penalty: " + quizarr[i].getPenalty());
+                    System.out.println(" Wrong Answer! - Penalty: "
+                        + quizarr[i].getPenalty());
                 }
             }
             System.out.print("Total Score: " + total);
@@ -169,11 +188,12 @@ class Quiz {
      * @param      marks     The marks
      * @param      penalty   The penalty
      */
-    Quiz(final String question, final int correct, final int marks, final int penalty) {
-        this.question = question;
-        this.correct = correct;
-        this.marks = marks;
-        this.penalty = penalty;
+    Quiz(final String questio, final int correc,
+    final int mark, final int penalt) {
+        this.question = questio;
+        this.correct = correc;
+        this.marks = mark;
+        this.penalty = penalt;
     }
     /**
      * Gets the question.
