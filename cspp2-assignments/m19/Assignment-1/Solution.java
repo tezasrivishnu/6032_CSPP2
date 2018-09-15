@@ -110,7 +110,7 @@ public final class Solution {
                     quizarr[size] = new Quiz(items[0], Integer.
                         parseInt(items[TWO]), Integer.
                         parseInt(items[THREE]), Integer.
-                        parseInt(items[4]));
+                        parseInt(items[FOUR]));
                     size += 1;
                 }
             }
