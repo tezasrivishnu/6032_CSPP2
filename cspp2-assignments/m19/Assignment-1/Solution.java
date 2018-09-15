@@ -95,13 +95,15 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for (int i = 0; i < answerCount; i++) {
-            String string = s.nextLine();
-            String[] arrays = string.split(" ");
-            array[i] = Integer.parseInt(arrays[1]);
-            System.out.println(quizarr[i].getQuestion() + "(" + quizarr[i].getMarks() + ")");
-            System.out.println(choices[0]+"        "+choices[1]+"        "+choices[2]+"        "+choices[3]);
-            System.out.println();
+        if (size > 0) {
+            for (int i = 0; i < answerCount; i++) {
+                String string = s.nextLine();
+                String[] arrays = string.split(" ");
+                array[i] = Integer.parseInt(arrays[1]);
+                System.out.println(quizarr[i].getQuestion() + "(" + quizarr[i].getMarks() + ")");
+                System.out.println(choices[0] + "        " + choices[1] + "        " + choices[2] + "        " + choices[3]);
+                System.out.println();
+            }
         }
     }
 
@@ -113,17 +115,19 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
         int total = 0;
-        for(int i = 0; i<size; i++) {
-            System.out.println(quizarr[i].getQuestion());
-            if(array[i] == quizarr[i].getCorrect()) {
-                total += quizarr[i].getMarks();
-                System.out.println(" Correct Answer! - Marks Awarded: "+quizarr[i].getMarks());
-            } else {
-                total += quizarr[i].getPenalty();
-                System.out.println(" Wrong Answer! - Penalty: "+quizarr[i].getPenalty());
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                System.out.println(quizarr[i].getQuestion());
+                if (array[i] == quizarr[i].getCorrect()) {
+                    total += quizarr[i].getMarks();
+                    System.out.println(" Correct Answer! - Marks Awarded: " + quizarr[i].getMarks());
+                } else {
+                    total += quizarr[i].getPenalty();
+                    System.out.println(" Wrong Answer! - Penalty: " + quizarr[i].getPenalty());
+                }
             }
+            System.out.print("Total Score: " + total);
         }
-        System.out.print("Total Score: "+total);
     }
 }
 class Quiz {
