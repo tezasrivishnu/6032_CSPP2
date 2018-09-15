@@ -84,7 +84,7 @@ public final class Solution {
         if (flag == 1) {
             System.out.println("Error! Malformed question");
         }
-        if (flag == 0 && available) {
+        if (flag == 0 && !available) {
             System.out.println(questionCount + " are added to the quiz");
             for (int i = 0; i < questionCount; i++) {
                 String str = s.nextLine();
