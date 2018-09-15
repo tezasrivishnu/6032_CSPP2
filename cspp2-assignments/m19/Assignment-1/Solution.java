@@ -69,6 +69,7 @@ public final class Solution {
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
         } else {
+            System.out.println(questionCount + " are added to the quiz");
             for (int i = 0; i < questionCount; i++) {
                 String str = s.nextLine();
                 String[] items = str.split(":");
@@ -76,7 +77,6 @@ public final class Solution {
                 if (items.length != 5) {
                     System.out.println("Error! Malformed question");
                 } else {
-                    System.out.println(questionCount + " are added to the quiz");
                     quizarr[size] = new Quiz(items[0], Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4]));
                     size += 1;
                 }
