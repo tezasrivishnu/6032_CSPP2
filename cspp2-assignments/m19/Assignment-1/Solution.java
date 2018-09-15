@@ -123,7 +123,7 @@ public final class Solution {
                 System.out.println(" Wrong Answer! - Penalty: "+quizarr[i].getPenalty());
             }
         }
-        System.out.println("Total Score: "+total);
+        System.out.print("Total Score: "+total);
     }
 }
 class Quiz {
