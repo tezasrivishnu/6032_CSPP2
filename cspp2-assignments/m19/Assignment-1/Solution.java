@@ -101,7 +101,7 @@ public final class Solution {
                 String[] arrays = string.split(" ");
                 array[i] = Integer.parseInt(arrays[1]);
                 System.out.println(quizarr[i].getQuestion() + "(" + quizarr[i].getMarks() + ")");
-                System.out.println(choices[0] + "        " + choices[1] + "        " + choices[2] + "        " + choices[3]);
+                System.out.println(choices[0] + "\t" + choices[1] + "\t" + choices[2] + "\t" + choices[3]);
                 System.out.println();
             }
         }
