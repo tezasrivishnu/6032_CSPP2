@@ -4,18 +4,23 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
+    private static final int FOUR = 4;
+    private static final int THREE = 3;
+    private static final int FIVE = 5;
+    private static final int TWO = 2;
     /**
      * initilizing Quiz array.
      */
-    private static Quiz[] quizarr = new Quiz[4];
+    private static Quiz[] quizarr = new Quiz[FOUR];
     /**
      * initilizing array.
      */
-    private static int[] array = new int[4];
+    private static int[] array = new int[FOUR];
     /**
      * initilizing choices array.
      */
-    private static String[] choices = {"choice 1", "choice 2", "choice 3", "choice 4"};
+    private static String[] choices = {"choice 1", "choice 2",
+    "choice 3", "choice 4"};
     /**
      * initilizing size.
      */
@@ -87,11 +92,11 @@ public final class Solution {
                 String str = s.nextLine();
                 String[] items = str.split(":");
                 String[] choice = items[1].split(",");
-                if (items.length != 5) {
+                if (items.length != FIVE) {
                     System.out.println("Error! Malformed question");
                 } else {
                     quizarr[size] = new Quiz(items[0], Integer.
-                        parseInt(items[2]), Integer.parseInt(items[3]), Integer.
+                        parseInt(items[TWO]), Integer.parseInt(items[THREE]), Integer.
                         parseInt(items[4]));
                     size += 1;
                 }
@@ -119,7 +124,7 @@ public final class Solution {
                 System.out.println(quizarr[i].getQuestion()
                     + "(" + quizarr[i].getMarks() + ")");
                 System.out.println(choices[0] + "\t" + choices[1]
-                    + "\t" + choices[2] + "\t" + choices[3]);
+                    + "\t" + choices[2] + "\t" + choices[THREE]);
                 System.out.println();
             }
         }
@@ -183,10 +188,10 @@ class Quiz {
     /**
      * Constructs the object.
      *
-     * @param      question  The question
-     * @param      correct   The correct
-     * @param      marks     The marks
-     * @param      penalty   The penalty
+     * @param      questio  The question
+     * @param      correc   The correct
+     * @param      mark    The marks
+     * @param      penalt   The penalty
      */
     Quiz(final String questio, final int correc,
     final int mark, final int penalt) {
