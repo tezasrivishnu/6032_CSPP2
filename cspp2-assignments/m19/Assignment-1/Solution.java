@@ -100,7 +100,7 @@ public final class Solution {
             String[] arrays = string.split(" ");
             array[i] = Integer.parseInt(arrays[1]);
             System.out.println(quizarr[i].getQuestion() + "(" + quizarr[i].getMarks() + ")");
-            System.out.println("choice 1    choice 2    choice 3    choice 4");
+            System.out.println("choice 1        choice 2      choice 3       choice 4");
             System.out.println();
         }
     }
