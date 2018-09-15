@@ -4,9 +4,21 @@ import java.util.Scanner;
  * Solution class for code-eval.
  */
 public final class Solution {
+    /**
+     * intitializing value of 4.
+     */
     private static final int FOUR = 4;
+    /**
+     * intitializing value of 3.
+     */
     private static final int THREE = 3;
+    /**
+     * intitializing value of 5.
+     */
     private static final int FIVE = 5;
+    /**
+     * intitializing value of 2.
+     */
     private static final int TWO = 2;
     /**
      * initilizing Quiz array.
@@ -96,7 +108,8 @@ public final class Solution {
                     System.out.println("Error! Malformed question");
                 } else {
                     quizarr[size] = new Quiz(items[0], Integer.
-                        parseInt(items[TWO]), Integer.parseInt(items[THREE]), Integer.
+                        parseInt(items[TWO]), Integer.
+                        parseInt(items[THREE]), Integer.
                         parseInt(items[4]));
                     size += 1;
                 }
