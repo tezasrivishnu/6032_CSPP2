@@ -130,30 +130,79 @@ public final class Solution {
         }
     }
 }
+/**
+ * Class for quiz.
+ */
 class Quiz {
-    String question;
-    String choices;
-    int correct;
-    int marks;
-    int penalty;
+    /**
+     * intitializing questions.
+     */
+    private String question;
+    /**
+     * intitializing choices.
+     */
+    private String choices;
+    /**
+     * intitializing correct.
+     */
+    private int correct;
+    /**
+     * intitializing marks.
+     */
+    private int marks;
+    /**
+     * intitializing penalty.
+     */
+    private int penalty;
+    /**
+     * Constructs the object.
+     */
     Quiz() {
 
     }
-    Quiz(String question, int correct, int marks, int penalty) {
+    /**
+     * Constructs the object.
+     *
+     * @param      question  The question
+     * @param      correct   The correct
+     * @param      marks     The marks
+     * @param      penalty   The penalty
+     */
+    Quiz(final String question, final int correct, final int marks, final int penalty) {
         this.question = question;
         this.correct = correct;
         this.marks = marks;
         this.penalty = penalty;
     }
+    /**
+     * Gets the question.
+     *
+     * @return     The question.
+     */
     public String getQuestion() {
         return this.question;
     }
+    /**
+     * Gets the correct.
+     *
+     * @return     The correct.
+     */
     public int getCorrect() {
         return this.correct;
     }
+    /**
+     * Gets the marks.
+     *
+     * @return     The marks.
+     */
     public int getMarks() {
         return this.marks;
     }
+    /**
+     * Gets the penalty.
+     *
+     * @return     The penalty.
+     */
     public int getPenalty() {
         return this.penalty;
     }
