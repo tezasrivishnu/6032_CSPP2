@@ -66,31 +66,21 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        int flag = 0;
         if (questionCount == 0) {
-            flag = 1;
+            System.out.println("Quiz does not have questions");
         } else {
             for (int i = 0; i < questionCount; i++) {
                 String str = s.nextLine();
                 String[] items = str.split(":");
                 String[] choice = items[1].split(",");
                 if (items.length != 5) {
-                    flag = 2;
+                    System.out.println("Error! Malformed question");
                 } else {
-                    if (flag == 1) {
-                        System.out.println("Quiz does not have questions");
-                    }
-                    if (flag == 2) {
-                        System.out.println("Error! Malformed question");
-                    }
-                    if (flag == 0) {
-                        System.out.println(questionCount + " are added to the quiz");
-                        quizarr[size] = new Quiz(items[0], Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4]));
-                        size += 1;
-                    }
+                    System.out.println(questionCount + " are added to the quiz");
+                    quizarr[size] = new Quiz(items[0], Integer.parseInt(items[2]), Integer.parseInt(items[3]), Integer.parseInt(items[4]));
+                    size += 1;
                 }
             }
-
         }
     }
 
