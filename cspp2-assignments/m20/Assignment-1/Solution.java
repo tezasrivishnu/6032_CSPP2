@@ -261,16 +261,16 @@ public final class Solution {
 					System.out.println("Error! Malformed question");
 					return;
 				} else if (choice.length < 2) {
-					System.out.println(tokens[0]+" does not have enough answer choices");
+					System.out.println(tokens[0] + " does not have enough answer choices");
 					return;
 				} else if (Integer.parseInt(tokens[2]) > 4) {
-					System.out.println("Error! Correct answer choice number is out of range for "+tokens[0]);
+					System.out.println("Error! Correct answer choice number is out of range for " + tokens[0]);
 					return;
 				} else if (Integer.parseInt(tokens[3]) < 0) {
-					System.out.println("Invalid max marks for "+tokens[0]);
+					System.out.println("Invalid max marks for " + tokens[0]);
 					return;
 				}	else if (Integer.parseInt(tokens[4]) > 0) {
-					System.out.println("Invalid penalty for "+tokens[0]);
+					System.out.println("Invalid penalty for " + tokens[0]);
 					return;
 				}
 				//quiz.addQuestion(tokens[0]);
@@ -293,14 +293,18 @@ public final class Solution {
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
 		Question question = new Question();
+		String s = "";
 		if (count > 0) {
 			for (int i = 0; i < q; i++) {
 				String string = scan.nextLine();
 				quesarr[i].setResponse(string);
 				System.out.println(quesarr[i].getQuestionText()
 				                   + "(" + quesarr[i].getMaxMarks() + ")");
-				System.out.println(choice[0] + "\t" + choice[1]
-				                   + "\t" + choice[2] + "\t" + choice[3]);
+				for (i = 0; i < choice.length - 1; i++) {
+					s += choice[i] + "\t";
+				}
+				s += choice[i];
+				System.out.println(s);
 				System.out.println();
 			}
 		}
