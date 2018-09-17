@@ -138,7 +138,7 @@ class Quiz {
     /**
      * { var_description }.
      */
-    private int size;
+    private int size = 0;
     /**
      * Constructs the object.
      */
