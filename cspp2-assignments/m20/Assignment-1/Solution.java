@@ -190,10 +190,41 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
-    private static Question[] quesarr = new Question[10];
+    /**
+     * intitializing value of 4.
+     */
+    private static final int FOUR = 4;
+    /**
+     * intitializing value of 3.
+     */
+    private static final int THREE = 3;
+    /**
+     * intitializing value of 5.
+     */
+    private static final int FIVE = 5;
+    /**
+     * intitializing value of 10.
+     */
+    private static final int TEN = 10;
+     /**
+     * initilizing Questions array.
+     */
+    private static Question[] quesarr = new Question[TEN];
+     /**
+     * initilizing count.
+     */
     private static int count = 0;
+     /**
+     * initilizing choices array.
+     */
     private static String[] choice;
+     /**
+     * initilizing tokens array.
+     */
     private static String[] tokens;
+     /**
+     * initilizing string array.
+     */
     private static String[] string;
     /**
     * Constructs the object.
@@ -265,7 +296,7 @@ public final class Solution {
                 String ques = scan.nextLine();
                 tokens = ques.split(":");
                 choice = tokens[1].split(",");
-                if (tokens.length < 5
+                if (tokens.length < FIVE
                     || tokens[0].length() == 0) {
                     System.out.println(
                         "Error! Malformed question");
@@ -274,17 +305,17 @@ public final class Solution {
                     System.out.println(tokens[0]
                        + " does not have enough answer choices");
                     return;
-                } else if (Integer.parseInt(tokens[2]) > 4) {
+                } else if (Integer.parseInt(tokens[2]) > FOUR) {
                     System.out.println(
     "Error! Correct answer choice number is out of range for "
                         + tokens[0]);
                     return;
-                } else if (Integer.parseInt(tokens[3]) < 0) {
+                } else if (Integer.parseInt(tokens[THREE]) < 0) {
                     System.out.println(
                         "Invalid max marks for " + tokens[0]);
                     return;
                 }   else if (Integer.
-                    parseInt(tokens[4]) > 0) {
+                    parseInt(tokens[FOUR]) > 0) {
                     System.out.println(
                         "Invalid penalty for " + tokens[0]);
                     return;
@@ -292,7 +323,7 @@ public final class Solution {
                 //quiz.addQuestion(tokens[0]);
                 quesarr[count] = new Question(tokens[0], choice, Integer.
                     parseInt(tokens[2]), Integer.
-                    parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+                    parseInt(tokens[THREE]), Integer.parseInt(tokens[FOUR]));
                 count += 1;
             }
             System.out.println(q + " are added to the quiz");
