@@ -298,7 +298,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        Question question;
+        //Question question;
         if (q == 0) {
             System.out.println("Quiz does not have questions");
         } else {
@@ -331,7 +331,7 @@ public final class Solution {
                     return;
                 }
                 //quiz.addQuestion(tokens[0]);
-                question = new Question(tokens[0], choice, Integer.
+                Question question = new Question(tokens[0], choice, Integer.
                     parseInt(tokens[2]), Integer.
                     parseInt(tokens[THREE]), Integer.parseInt(tokens[FOUR]));
                 quesarr[count] = question;
