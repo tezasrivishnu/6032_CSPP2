@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for question.
  */
@@ -134,7 +135,7 @@ class Quiz {
     /**
      * { var_description }.
      */
-    private Question[] question;
+    private Question[] question = new Question[10];
     /**
      * { var_description }.
      */
