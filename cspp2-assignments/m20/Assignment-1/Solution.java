@@ -257,10 +257,10 @@ public final class Solution {
 				String ques = scan.nextLine();
 				tokens = ques.split(":");
 				choice = tokens[1].split(",");
-				if (tokens.length < 5) {
+				if (tokens.length < 5 || tokens[0].length() == 0) {
 					System.out.println("Error! Malformed question");
 					return;
-				} else if (choice.length < 4) {
+				} else if (choice.length < 2) {
 					System.out.println("does not have enough answer choices");
 					return;
 				} else if (Integer.parseInt(tokens[2]) > 4) {
