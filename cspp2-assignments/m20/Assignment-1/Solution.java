@@ -216,7 +216,7 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
             // split the line using space
-            String[] tokens = line.split(" ");
+            tokens = line.split(" ");
             // based on the list operation
             //invoke the corresponding method
             switch (tokens[0]) {
@@ -265,19 +265,19 @@ public final class Solution {
                 String ques = scan.nextLine();
                 tokens = ques.split(":");
                 choice = tokens[1].split(",");
-                if (tokens.length < 5 ||
-                    tokens[0].length() == 0) {
+                if (tokens.length < 5
+                    || tokens[0].length() == 0) {
                     System.out.println(
                         "Error! Malformed question");
                     return;
                 } else if (choice.length < 2) {
-                    System.out.println(tokens[0] +
-                        " does not have enough answer choices");
+                    System.out.println(tokens[0]
+                       + " does not have enough answer choices");
                     return;
                 } else if (Integer.parseInt(tokens[2]) > 4) {
                     System.out.println(
-                        "Error! Correct answer choice number is out of range for " +
-                        tokens[0]);
+    "Error! Correct answer choice number is out of range for "
+                        + tokens[0]);
                     return;
                 } else if (Integer.parseInt(tokens[3]) < 0) {
                     System.out.println(
