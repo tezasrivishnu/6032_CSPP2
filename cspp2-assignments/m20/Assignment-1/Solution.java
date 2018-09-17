@@ -1,7 +1,7 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Class for question.
+ * @author tezasrivishnu.
  */
 class Question {
     /**
@@ -129,13 +129,17 @@ class Question {
  */
 class Quiz {
     /**
+     * intitializing value of 10.
+     */
+    private static final int TEN = 10;
+    /**
      * { var_description }.
      */
     private final int onehundred = 100;
     /**
      * { var_description }.
      */
-    private Question[] question = new Question[10];
+    private Question[] question = new Question[TEN];
     /**
      * { var_description }.
      */
@@ -168,8 +172,6 @@ class Quiz {
     }
     /**
      * Shows the report.
-     *
-     * @return     { description_of_the_return_value }
      */
     public void showReport() {
         int total = 0;
@@ -338,7 +340,6 @@ public final class Solution {
                 quesarr[count] = question;
                 quiz.addQuestion(question);
                 count += 1;
-                
             }
             System.out.println(q + " are added to the quiz");
         }
