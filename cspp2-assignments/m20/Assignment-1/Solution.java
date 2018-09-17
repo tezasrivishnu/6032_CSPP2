@@ -261,7 +261,7 @@ public final class Solution {
 					System.out.println("Error! Malformed question");
 					return;
 				} else if (choice.length < 2) {
-					System.out.println("does not have enough answer choices");
+					System.out.println(tokens[0]+" does not have enough answer choices");
 					return;
 				} else if (Integer.parseInt(tokens[2]) > 4) {
 					System.out.println("Error! Correct answer choice number is out of range for "+tokens[0]);
