@@ -334,8 +334,8 @@ public final class Solution {
                 question = new Question(tokens[0], choice, Integer.
                     parseInt(tokens[2]), Integer.
                     parseInt(tokens[THREE]), Integer.parseInt(tokens[FOUR]));
-                quesarr[count] = token;
-                quiz.addQuestion(token);
+                quesarr[count] = question;
+                quiz.addQuestion(question);
                 count += 1;
                 
             }
