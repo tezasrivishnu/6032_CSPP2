@@ -401,6 +401,6 @@ public final class Solution {
         //     }
         //     System.out.print("Total Score: " + total);
         // }
-        quiz.toString();
+        quiz.showReport();
     }
 }
