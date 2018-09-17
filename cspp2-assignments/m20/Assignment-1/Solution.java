@@ -331,10 +331,11 @@ public final class Solution {
                     return;
                 }
                 //quiz.addQuestion(tokens[0]);
-                quesarr[count] = new Question(tokens[0], choice, Integer.
+                question = new Question(tokens[0], choice, Integer.
                     parseInt(tokens[2]), Integer.
                     parseInt(tokens[THREE]), Integer.parseInt(tokens[FOUR]));
-                quiz.addQuestion(quesarr[count]);
+                quesarr[count] = token;
+                quiz.addQuestion(token);
                 count += 1;
                 
             }
