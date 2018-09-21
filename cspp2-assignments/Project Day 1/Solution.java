@@ -25,7 +25,7 @@ final class Solution {
             File[] filelist = files.listFiles();
             int length = filelist.length;
             if (length == 0) {
-                throw new Exception("empty directory");
+                throw new Exception();
             } else {
                 for (int i = 0; i < length; i++) {
                     String s = toText(filelist[i]);
@@ -43,8 +43,8 @@ final class Solution {
                     System.out.print("File" + (i + 1) + ".txt" + "\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
-                        System.out.printf("%.2f", beg + "\t\t");
-                        //System.out.print("\t\t");
+                        System.out.printf("%.2f", beg);
+                        System.out.print("\t\t");
                     }
                     System.out.println();
                 }
@@ -240,7 +240,7 @@ class Words {
      */
     private int[] count;
     /**
-     * declaring String array distinct.
+     * declaring String array distinct
      */
     private String[] distinct;
     /**
