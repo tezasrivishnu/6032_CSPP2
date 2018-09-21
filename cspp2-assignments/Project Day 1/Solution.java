@@ -8,7 +8,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
     /**
@@ -82,7 +82,13 @@ class Solution {
  * Class for bag of words.
  */
 class BagOfWords {
+    /**
+     * Word  class array.
+     */
     private Words[] words;
+    /**
+     * declaring int a.
+     */
     private int a;
     /**
      * Constructs the object.
@@ -225,8 +231,17 @@ class BagOfWords {
  * Class for words.
  */
 class Words {
+    /**
+     * declaring string array words.
+     */
     private String[] words;
+    /**
+     * declaring int array count.
+     */
     private int[] count;
+    /**
+     * declaring String array distinct
+     */
     private String[] distinct;
     /**
      * Constructs the object.
