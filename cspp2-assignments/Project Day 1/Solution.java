@@ -4,7 +4,7 @@ import java.io.*;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -43,8 +43,8 @@ class Solution {
                     System.out.print("File" + (i + 1) + ".txt" + "\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
-                        System.out.printf("%.2f", beg);
-                        System.out.print("\t\t");
+                        System.out.printf("%.2f", beg + "\t\t");
+                        //System.out.print("\t\t");
                     }
                     System.out.println();
                 }
@@ -240,7 +240,7 @@ class Words {
      */
     private int[] count;
     /**
-     * declaring String array distinct
+     * declaring String array distinct.
      */
     private String[] distinct;
     /**
