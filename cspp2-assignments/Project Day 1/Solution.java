@@ -25,7 +25,7 @@ final class Solution {
             File[] filelist = files.listFiles();
             int length = filelist.length;
             if (length == 0) {
-                throw new Exception();
+                throw new Exception("empty directory");
             } else {
                 for (int i = 0; i < length; i++) {
                     String s = toText(filelist[i]);
