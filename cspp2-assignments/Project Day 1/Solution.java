@@ -32,11 +32,11 @@ public class Solution {
                 }
                 for (int s = 0; s < length; s++) {
                     System.out.print("\t\t");
-                    System.out.print("FILE" + (s + 1));
+                    System.out.print("FILE" + ".txt" + (s + 1));
                 }
                 System.out.println();
                 for (int i = 0; i < length; i++) {
-                    System.out.print("FILE" + (i + 1) + "\t\t");
+                    System.out.print("FILE" + (i + 1) + ".txt" + "\t\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
                         System.out.printf("%.2f", beg);
@@ -167,11 +167,11 @@ class BagOfWords {
         double onecoun = 0.0;
         double twocoun = 0.0;
         double answer = 0.0;
-        if(index==index1){
+        if (index == index1) {
             answer = 100.0;
             return answer;
         }
-        if(one.length == 0 || two.length == 0) {
+        if (one.length == 0 || two.length == 0) {
             answer = 0.0;
             return answer;
         }
