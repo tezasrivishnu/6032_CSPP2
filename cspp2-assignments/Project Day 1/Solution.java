@@ -31,7 +31,7 @@ public class Solution {
                     int[] count = bag.getCount(tokens, distinct);
                 }
                 for (int s = 0; s < length; s++) {
-                    System.out.print("\t\t");
+                    System.out.print("\t");
                     System.out.print("File" + (s + 1)+ ".txt");
                 }
                 System.out.println();
@@ -40,7 +40,7 @@ public class Solution {
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
                         System.out.printf("%.2f", beg);
-                        System.out.print("\t");
+                        System.out.print("\t\t");
                     }
                     System.out.println();
                 }
