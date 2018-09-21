@@ -36,7 +36,7 @@ public class Solution {
                 }
                 System.out.println();
                 for (int i = 0; i < length; i++) {
-                    System.out.print("File" + (i + 1) + ".txt" + "\t\t");
+                    System.out.print("File" + (i + 1) + ".txt" + "\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
                         System.out.printf("%.2f", beg);
