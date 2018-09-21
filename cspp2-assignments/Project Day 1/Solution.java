@@ -21,7 +21,7 @@ public class Solution {
             File[] filelist = files.listFiles();
             int length = filelist.length;
             if (length == 0) {
-                throw new Exception("empty dictionary");
+                throw new Exception();
             } else {
                 for (int i = 0; i < length; i++) {
                     String s = toText(filelist[i]);
@@ -31,16 +31,16 @@ public class Solution {
                     int[] count = bag.getCount(tokens, distinct);
                 }
                 for (int s = 0; s < length; s++) {
-                    System.out.print("\t");
+                    System.out.print("\t\t");
                     System.out.print("FILE" + (s + 1));
                 }
                 System.out.println();
                 for (int i = 0; i < length; i++) {
-                    System.out.print("FILE" + (i + 1) + "\t");
+                    System.out.print("FILE" + (i + 1) + "\t\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
                         System.out.printf("%.2f", beg);
-                        System.out.print("\t");
+                        System.out.print("\t\t");
                     }
                     System.out.println();
                 }
