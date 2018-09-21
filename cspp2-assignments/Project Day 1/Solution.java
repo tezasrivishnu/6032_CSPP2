@@ -30,9 +30,9 @@ public class Solution {
                     String[] distinct = bag.getDistinct(tokens);
                     int[] count = bag.getCount(tokens, distinct);
                 }
+                System.out.print("\t\t");
                 for (int s = 0; s < length; s++) {
-                    System.out.print("\t\t");
-                    System.out.print("File" + (s + 1)+ ".txt");
+                    System.out.print("File" + (s + 1)+ ".txt" + "\t");
                 }
                 System.out.println();
                 for (int i = 0; i < length; i++) {
