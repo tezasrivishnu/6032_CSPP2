@@ -4,10 +4,16 @@ import java.io.*;
 /**
  * Class for solution.
  */
-public class Solution {
+class Solution {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
     /**
      * main program for the solution.
-     *
+     * @throws Exception e;
      * @param      args  The arguments
      */
     public static void main(final String[] args) throws Exception {
@@ -55,7 +61,7 @@ public class Solution {
      *
      * @return     string representation
      */
-    public static String toText(File file) {
+    public static String toText(final File file) {
         String str = "";
         try {
             Scanner input = new Scanner(new FileReader(file));
@@ -90,7 +96,7 @@ class BagOfWords {
      *
      * @param      token  The token
      */
-    public void addWords(Words token) {
+    public void addWords(final Words token) {
         words[a++] = token;
     }
     /**
