@@ -1,7 +1,5 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.io.*;
 /**
  * Class for solution.
@@ -32,7 +30,7 @@ public class Solution {
                 }
                 System.out.print("\t\t");
                 for (int s = 0; s < length; s++) {
-                    System.out.print("File" + (s + 1)+ ".txt" + "\t");
+                    System.out.print("File" + (s + 1) + ".txt" + "\t");
                 }
                 System.out.println();
                 for (int i = 0; i < length; i++) {
@@ -78,8 +76,8 @@ public class Solution {
  * Class for bag of words.
  */
 class BagOfWords {
-    Words[] words;
-    int a;
+    private Words[] words;
+    private int a;
     /**
      * Constructs the object.
      */
@@ -221,9 +219,9 @@ class BagOfWords {
  * Class for words.
  */
 class Words {
-    String[] words;
-    int[] count;
-    String[] distinct;
+    private String[] words;
+    private int[] count;
+    private String[] distinct;
     /**
      * Constructs the object.
      *
