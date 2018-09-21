@@ -31,7 +31,7 @@ public class Solution {
                     int[] count = bag.getCount(tokens, distinct);
                 }
                 for (int s = 0; s < length; s++) {
-                    System.out.print("\t");
+                    System.out.print("\t\t");
                     System.out.print("File" + (s + 1)+ ".txt");
                 }
                 System.out.println();
