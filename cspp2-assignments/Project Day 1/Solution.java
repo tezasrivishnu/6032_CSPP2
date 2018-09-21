@@ -46,7 +46,7 @@ public class Solution {
                 }
             }
         } catch (Exception e) {
-            System.out.println("empty dictionary");;
+            System.out.println("empty directory");;
         }
     }
 
