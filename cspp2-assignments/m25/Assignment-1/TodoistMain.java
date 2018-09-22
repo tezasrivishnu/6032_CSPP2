@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 /**
  * Class for todoist main.
+ * @author tezasrivishnu.
  */
 public class TodoistMain {
 
@@ -117,13 +118,14 @@ public class TodoistMain {
 	}
 }
 class Task {
-	String title;
-	String assignedTo;
-	int timeToComplete;
-	String important;
-	String urgent;
-	String status;
-	Task(String tasktitle, String taskassignedto, int tasktime, boolean imp, boolean urg, String status) {
+	private String title;
+	private String assignedTo;
+	private int timeToComplete;
+	private String important;
+	private String urgent;
+	private String status;
+	Task(final String tasktitle, final String taskassignedto,
+		final int tasktime, final boolean imp, final boolean urg, final String status) {
 		this.title = tasktitle;
 		this.assignedTo = taskassignedto;
 		this.timeToComplete = tasktime;
@@ -183,7 +185,7 @@ class Todoist {
 	Todoist() {
 		taskarr = new List<Task>();
 	}
-	public void addTask(Task task) {
+	public void addTask(final Task task) {
 		taskarr.add(task);
 	}
 	public int totalTime4Completion() {
@@ -195,7 +197,7 @@ class Todoist {
 		}
 		return time;
 	}
-	public Task getNextTask(String name) {
+	public Task getNextTask(final String name) {
 		for (int i = 0; i < taskarr.size(); i++) {
 			if (name.equals(taskarr.get(i).getassignedTo()) &&
 				(((taskarr.get(i).getImportant()).equals("Important"))
@@ -206,7 +208,7 @@ class Todoist {
 		}
 		return null;
 	}
-	public Task[] getNextTask(String name, int num) {
+	public Task[] getNextTask(final String name, final int num) {
 		Task[] ne = new Task[num];
 		int count = 0;
 		for (int i = 0; i < taskarr.size(); i++) {
@@ -224,7 +226,4 @@ class Todoist {
 
 	public void totoString() {
 		for (int i = 0; i < taskarr.size(); i++) {
-			taskarr.get(i).totoString();
-		}
-	}
-}
+			taskarr.get(i)
