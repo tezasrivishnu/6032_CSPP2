@@ -31,11 +31,11 @@ public class TodoistMain {
 			case "get-next":
 				System.out.println(todo.getNextTask(tokens[1]));
 				break;
-			// case "get-next-n":
-			// 	int n = Integer.parseInt(tokens[2]);
-			// 	Task[] tasks = todo.getNextTask(tokens[1], n);
-			// 	System.out.println(Arrays.deepToString(tasks));
-			// 	break;
+			case "get-next-n":
+				int n = Integer.parseInt(tokens[2]);
+				Task[] tasks = todo.getNextTask(tokens[1], n);
+				System.out.println(Arrays.deepToString(tasks));
+				break;
 			case "total-time":
 				System.out.println(todo.totalTime4Completion());
 				break;
@@ -206,10 +206,19 @@ class Todoist {
 		}
 		return null;
 	}
-	// public Task[] getNextTask(String name, int num) {
-	// 	List<Task> ne = new List<Task>();
-
-	// }
+	public Task[] getNextTask(String name, int num) {
+		Task[] ne = new Task[num];
+		int count = 0;
+		for (int i = 0; i < taskarr.size(); i++) {
+			if (name.equals(taskarr.get(i).getassignedTo())) {
+				ne[count] = taskarr.get(i);
+				count += 1;
+			} if(count++ == num) {
+				return ne;
+			}
+		}
+		return ne;
+	}
 
 
 
