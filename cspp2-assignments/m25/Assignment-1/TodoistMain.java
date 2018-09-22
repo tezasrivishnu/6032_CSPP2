@@ -212,7 +212,8 @@ class Todoist {
 		Task[] ne = new Task[num];
 		int count = 0;
 		for (int i = 0; i < taskarr.size(); i++) {
-			if (name.equals(taskarr.get(i).getassignedTo())) {
+			if (name.equals(taskarr.get(i).getassignedTo())
+				&& (taskarr.get(i).getStatus()).equals("todo")) {
 				ne[count] = taskarr.get(i);
 				count += 1;
 			} if(count == num) {
