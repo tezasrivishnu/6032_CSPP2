@@ -203,15 +203,13 @@ class Todoist {
 				 && ((taskarr.get(i).getStatus()).equals("todo")))) {
 				return taskarr.get(i);
 			}
-			else if (name.equals(taskarr.get(i).getassignedTo()) &&
-				(((taskarr.get(i).getImportant()).equals("Important"))
-				 && ((taskarr.get(i).getUrgent()).equals("Urgent"))
-				 && ((taskarr.get(i).getStatus()).equals("todo")))) {
-				return taskarr.get(i);
-			}
 		}
 		return null;
 	}
+	// public Task[] getNextTask(String name, int num) {
+	// 	List<Task> ne = new List<Task>();
+
+	// }
 
 
 
