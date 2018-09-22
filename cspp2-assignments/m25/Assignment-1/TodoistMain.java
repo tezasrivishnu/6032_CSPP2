@@ -213,7 +213,7 @@ class Todoist {
 		int count = 0;
 		for (int i = 0; i < taskarr.size(); i++) {
 			if (name.equals(taskarr.get(i).getassignedTo())) {
-				ne[count-1] = taskarr.get(i);
+				ne[count] = taskarr.get(i);
 				count += 1;
 			} if(count == num) {
 				return ne;
