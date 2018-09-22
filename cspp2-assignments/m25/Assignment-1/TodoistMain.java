@@ -209,7 +209,7 @@ class Todoist {
 		return null;
 	}
 	public Task[] getNextTask(final String name, final int num) {
-		Task[] ne = new Task[num];
+		Task[] ne = new Task[num+1];
 		int count = 0;
 		for (int i = 0; i < taskarr.size(); i++) {
 			if (name.equals(taskarr.get(i).getassignedTo())) {
@@ -226,4 +226,7 @@ class Todoist {
 
 	public void totoString() {
 		for (int i = 0; i < taskarr.size(); i++) {
-			taskarr.get(i)
+			taskarr.get(i).totoString();
+		}
+	}
+}
