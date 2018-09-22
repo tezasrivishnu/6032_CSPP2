@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Class for todoist main.
  * @author tezasrivishnu.
  */
-public class TodoistMain {
+public final class TodoistMain {
     /**
      * initialising value of 6.
      */
