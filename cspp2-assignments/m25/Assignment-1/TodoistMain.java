@@ -210,7 +210,7 @@ class Todoist {
 	}
 	public Task[] getNextTask(final String name, final int num) {
 		Task[] ne = new Task[num];
-		int count = 1;
+		int count = 0;
 		for (int i = 0; i < taskarr.size(); i++) {
 			if (name.equals(taskarr.get(i).getassignedTo())) {
 				ne[count-1] = taskarr.get(i);
