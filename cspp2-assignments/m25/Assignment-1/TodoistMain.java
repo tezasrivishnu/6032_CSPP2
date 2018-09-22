@@ -203,7 +203,7 @@ class Todoist {
 				 && ((taskarr.get(i).getStatus()).equals("todo")))) {
 				return taskarr.get(i);
 			}
-			if (name.equals(taskarr.get(i).getassignedTo()) &&
+			else if (name.equals(taskarr.get(i).getassignedTo()) &&
 				(((taskarr.get(i).getImportant()).equals("Important"))
 				 && ((taskarr.get(i).getUrgent()).equals("Urgent"))
 				 && ((taskarr.get(i).getStatus()).equals("todo")))) {
