@@ -11,6 +11,22 @@ import java.util.Arrays;
  */
 public class TodoistMain {
     /**
+     * initialising value of 6.
+     */
+    private static final int SIX = 6;
+    /**
+     * initialising value of 4.
+     */
+    private static final int FOUR = 4;
+    /**
+     * initialising value of 5.
+     */
+    private static final int FIVE = 5;
+    /**
+     * initialising value of 3.
+     */
+    private static final int THREE = 3;
+    /**
      * Constructs the object.
      */
     private TodoistMain() {
@@ -91,21 +107,21 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         //Task s = new Task();
         String title = tokens[1];
-        int flag = 6;
+        int flag = SIX;
         if (title.length() == 0) {
             flag -= 1;
             throw new Exception("Title not provided");
         }
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
+        int timeToComplete = Integer.parseInt(tokens[THREE]);
         if (timeToComplete < 0) {
             flag -= 1;
             throw new Exception("Invalid timeToComplete "
                 + timeToComplete);
         }
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        boolean important = tokens[FOUR].equals("y");
+        boolean urgent = tokens[FIVE].equals("y");
+        String status = tokens[SIX];
         if (!(status.equals("todo") || status.equals("done"))) {
             flag -= 1;
             throw new Exception("Invalid status " + status);
@@ -161,7 +177,7 @@ class Task {
      * @param      tasktime        The tasktime
      * @param      imp             The imp
      * @param      urg             The urg
-     * @param      status          The status
+     * @param      status1          The status
      */
     Task(final String tasktitle, final String taskassignedto,
          final int tasktime, final boolean imp,
