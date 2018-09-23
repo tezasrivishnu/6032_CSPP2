@@ -30,7 +30,7 @@ class Solution {
                 }
 				System.out.println();
 				for (int i = 0; i < length; i++) {
-					System.out.print("file" + (i + 1) + ".txt" + "\t");
+					System.out.print("file" + (i + 1) + ".txt" + "         ");
 					for (int j = 0; j < length; j++) {
 						beg = lcs.frequencyWords(i, j);
 						if (max < beg && beg != 100.0) {
