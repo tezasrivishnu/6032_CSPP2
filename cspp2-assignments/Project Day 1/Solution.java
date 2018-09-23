@@ -51,7 +51,7 @@ final class Solution {
                             l = i;
                             m = j;
                         }
-                        System.out.printf("%.2f", beg);
+                        System.out.print(beg.intValue());
                         System.out.print("\t\t");
                     }
                     System.out.println();
