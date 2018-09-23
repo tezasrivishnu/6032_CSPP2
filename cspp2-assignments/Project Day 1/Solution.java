@@ -56,8 +56,8 @@ final class Solution {
                     }
                     System.out.println();
                 }
-                System.out.println("Maximum similarity is between file" + (l+1)
-                    + ".txt and file" + (m+1) + ".txt");
+                System.out.println("Maximum similarity is between File" + (l+1)
+                    + ".txt and File" + (m+1) + ".txt");
             }
         } catch (Exception e) {
             System.out.println("empty directory");;
