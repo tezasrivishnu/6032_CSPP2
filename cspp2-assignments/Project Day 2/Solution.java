@@ -39,7 +39,7 @@ class Solution {
 							m = j;
 						}
 						System.out.print(Math.round(beg-0.1)+".0");
-						System.out.print("        ");
+						System.out.print("         ");
 					}
 					System.out.println();
 				}
