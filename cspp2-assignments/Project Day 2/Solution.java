@@ -24,7 +24,7 @@ class Solution {
 					String s = toText(filelist[i]).toLowerCase();
 					lcs.addWords(new Words(s, s.length()));
 				}
-				System.out.print("\t");
+				System.out.print("\t"+"    ");
 				for (int s = 0; s < length; s++) {
 					System.out.print("file" + (s + 1) + ".txt" + "\t");
 				}
