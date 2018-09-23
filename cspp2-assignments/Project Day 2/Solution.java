@@ -1,16 +1,16 @@
 import java.util.Scanner;
 import java.io.FileReader;
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 /**
  * Class for solution.
  * @author tezasrivishnuu.
  */
 final class Solution {
+    /**
+     * initializing the value of 100.
+     */
+    private static final double HUN = 100.0;
     /**
      * Constructs the object.
      */
@@ -50,7 +50,7 @@ final class Solution {
                     System.out.print("file" + (i + 1) + ".txt" + "        ");
                     for (int j = 0; j < length; j++) {
                         beg = lcs.frequencyWords(i, j);
-                        if (max < beg && beg != 100.0) {
+                        if (max < beg && beg != HUN) {
                             max = beg;
                             l = i;
                             m = j;
@@ -60,7 +60,8 @@ final class Solution {
                     }
                     System.out.println();
                 }
-                System.out.println("Maximum similarity is between file" + (l + 1)
+                System.out.println("Maximum similarity is between file"
+                    + (l + 1)
                                    + ".txt and file" + (m + 1) + ".txt");
             }
         } catch (Exception e) {
@@ -105,6 +106,14 @@ final class Solution {
  */
 class Lcs {
     /**
+     * initializing the value of 20.
+     */
+    private static final int TWENTY = 20;
+    /**
+     * initializing the value of 100.
+     */
+    private static final double HUN = 100.0;
+    /**
      * declaring words class.
      */
     private Words[] words;
@@ -116,7 +125,7 @@ class Lcs {
      * Constructs the object.
      */
     Lcs() {
-        words = new Words[20];
+        words = new Words[TWENTY];
         a = 0;
     }
     /**
@@ -187,13 +196,13 @@ class Lcs {
             end -= 1;
         }
         if (one == two) {
-            lcspercentage = 100.0;
+            lcspercentage = HUN;
             return lcspercentage;
         }
         double count = str.length();
         //System.out.println(count+" "+(len+len1));
         lcspercentage = (count * 2) / (len + len1);
-        return (lcspercentage * 100.0);
+        return (lcspercentage * HUN);
     }
 }
 /**
