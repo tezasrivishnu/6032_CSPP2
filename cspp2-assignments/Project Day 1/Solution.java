@@ -18,6 +18,9 @@ final class Solution {
      */
     public static void main(final String[] args) throws Exception {
         BagOfWords bag = new BagOfWords();
+        Double max = 0.0;
+        int l = 0;
+        int m = 0;
         try {
             Scanner scan = new Scanner(System.in);
             String input = scan.nextLine();
@@ -43,11 +46,18 @@ final class Solution {
                     System.out.print("File" + (i + 1) + ".txt" + "\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
+                        if (max < beg && beg != 100.0) {
+                            max = beg;
+                            l = i;
+                            m = j;
+                        }
                         System.out.printf("%.2f", beg);
                         System.out.print("\t\t");
                     }
                     System.out.println();
                 }
+                System.out.println("Maximum similarity is between file" + (l+1)
+                    + ".txt and file" + (m+1) + ".txt");
             }
         } catch (Exception e) {
             System.out.println("empty directory");;
@@ -240,7 +250,7 @@ class Words {
      */
     private int[] count;
     /**
-     * declaring String array distinct
+     * declaring String array distinct.
      */
     private String[] distinct;
     /**
