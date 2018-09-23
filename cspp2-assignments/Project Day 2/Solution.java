@@ -1,14 +1,16 @@
 import java.util.Scanner;
-import java.util.Arrays;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.io.*;
-import java.lang.Math;
+import java.io.FileReader;
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 /**
  * Class for solution.
  * @author tezasrivishnuu.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -58,8 +60,8 @@ class Solution {
                     }
                     System.out.println();
                 }
-                System.out.println("Maximum similarity is between file" + (l+1)
-                    + ".txt and file" + (m+1) + ".txt");
+                System.out.println("Maximum similarity is between file" + (l + 1)
+                                   + ".txt and file" + (m + 1) + ".txt");
             }
         } catch (Exception e) {
             System.out.println("Empty Directory");
@@ -165,7 +167,7 @@ class Lcs {
                 if (i == 0 || j == 0) {
                     lcs[i][j] = 0;
                 } else if (one.charAt(i - 1)
-                    == two.charAt(j - 1)) {
+                           == two.charAt(j - 1)) {
                     lcs[i][j] = lcs[i - 1][j - 1] + 1;
                     if (l < lcs[i][j]) {
                         l = lcs[i][j];
