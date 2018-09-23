@@ -1,10 +1,15 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.io.*;
+import java.io.FileReader;
+import java.io.File;
 /**
  * Class for solution.
  */
 final class Solution {
+    /**
+     * initializing the value of 100.
+     */
+    private static final double HUN = 100.0;
     /**
      * Constructs the object.
      */
@@ -46,7 +51,7 @@ final class Solution {
                     System.out.print("File" + (i + 1) + ".txt" + "\t");
                     for (int j = 0; j < length; j++) {
                         Double beg = bag.getFrequency(i, j);
-                        if (max < beg && beg != 100.0) {
+                        if (max < beg && beg != HUN) {
                             max = beg;
                             l = i;
                             m = j;
@@ -56,8 +61,8 @@ final class Solution {
                     }
                     System.out.println();
                 }
-                System.out.println("Maximum similarity is between File" + (l+1)
-                    + ".txt and File" + (m+1) + ".txt");
+                System.out.println("Maximum similarity is between File" + (l + 1)
+                                   + ".txt and File" + (m + 1) + ".txt");
             }
         } catch (Exception e) {
             System.out.println("empty directory");;
@@ -93,6 +98,14 @@ final class Solution {
  */
 class BagOfWords {
     /**
+     * initializing the value of 20.
+     */
+    private static final int TWENTY = 20;
+    /**
+     * initializing the value of 100.
+     */
+    private static final double HUN = 100.0;
+    /**
      * Word  class array.
      */
     private Words[] words;
@@ -104,7 +117,7 @@ class BagOfWords {
      * Constructs the object.
      */
     BagOfWords() {
-        words = new Words[20];
+        words = new Words[TWENTY];
         a = 0;
     }
     /**
@@ -188,7 +201,7 @@ class BagOfWords {
         double twocoun = 0.0;
         double answer = 0.0;
         if (index == index1) {
-            answer = 100.0;
+            answer = HUN;
             return answer;
         }
         if (one.length == 0 || two.length == 0) {
@@ -232,7 +245,7 @@ class BagOfWords {
             onecoun += onecount[ele] * onecount[ele];
         }
         double ans = freq / (Math.sqrt(onecoun * twocoun));
-        answer = ans * 100.0;
+        answer = ans * HUN;
         return answer;
     }
 }
