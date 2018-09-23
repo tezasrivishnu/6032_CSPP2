@@ -26,7 +26,7 @@ class Solution {
 				}
 				System.out.print("\t"+"     ");
 				for (int s = 0; s < length; s++) {
-					System.out.print("file" + (s + 1) + ".txt" + "    ");
+					System.out.print("file" + (s + 1) + ".txt" + "     ");
 				}
 				System.out.println();
 				for (int i = 0; i < length; i++) {
