@@ -47,7 +47,7 @@ class Solution {
 					+ ".txt and file" + (m+1) + ".txt");
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println(e);
 		}
 	}
 	/**
